@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Rent A Car AUTOVIP</title>
+
+    <!-- CSS de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- start of navigation -->
+    <nav
+      id="autovip-header"
+      class="navbar navbar-expand-md navbar-dark bg-dark"
+    >
+      <div class="container">
+        <a href="index.html">
+          <img id="footer-logo" src="img/automotora_vip_logo.png" alt="AutoVIP"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#links"
+          aria-controls="links"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="links" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link nav-link-autovip" href="sales.html"
+                >Brand New Cars</a
+              >
+            </li>
+            <li>
+              <a class="nav-link nav-link-autovip" href="sales.html"
+                >Used Cars</a
+              >
+            </li>
+            <li>
+              <a class="nav-link nav-link-autovip" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#contact-modal"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navigation -->
+
+    <div id="sales" class="container">
+      <!-- start sales & currency -->
+      <div class="row mt-4">
+        <div class="col d-flex align-items-center justify-content-between">
+          <h1 class="mb-0">Sales</h1>
+          <div>
+            <i class="fas fa-exchange-alt"></i> UYU/USD:
+            <span>{{ currency }}</span>
+          </div>
+        </div>
+        <!-- end sales & currency -->
+      </div>
+      <hr class="mb-4" />
+      <!-- start filters  & cars section -->
+      <div class="row">
+        <div id="filters" class="col-md-3">
+          <div id="filter-section">
+            <form>
+              <h3 class="mb-0">Filter by</h3>
+              <hr class="mt-3 mb-2" />
+
+              <div class="mb-3">
+                <label for="year" class="form-label">Year</label>
+                <select id="year" class="form-select" v-model="yearSelected">
+                  <option value="" selected>Select Year</option>
+                  <option v-for="year in years" v-bind:value="year">
+                    {{year}}
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="brand" class="form-label">Brand</label>
+                <select id="brand" class="form-select" v-model="brandSelected">
+                  <option value="" selected>Select Brand</option>
+                  <option value="" v-for="brand in brands" v-bind:value="brand">
+                    {{brand}}
+                  </option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="model" class="form-label">Model</label>
+                <select id="model" class="form-select">
+                  <option selected>Select...</option>
+                  <option value="1">2021</option>
+                  <option value="2">2020</option>
+                  <option value="3">2019</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="condition" class="form-label">Condition</label>
+                <select id="condition" class="form-select">
+                  <option selected>Select Option</option>
+                  <option value="0">Brand New</option>
+                  <option value="1">Used</option>
+                </select>
+              </div>
+              <!-- end selector -->
+
+              <button
+                id="btn-filter"
+                type="button"
+                class="btn btn-autovip w-100"
+                v-on:click="filter"
+              >
+                <i class="fas fa-search"></i>
+                Filter
+              </button>
+            </form>
+          </div>
+          <button type="button" class="btn btn-outline-dark w-100 mt-4">
+            <i class="fas fa-dollar-sign"></i>
+            Other Currency
+          </button>
+        </div>
+        <div class="col-md-9">
+          <div class="each-car" v-for="car in cars">
+            <div class="row position-relative">
+              <span id="badge" class="badge badge-autovip">New</span>
+              <div id="car-picture" class="col-4 mb-3 align-items-start">
+                <img
+                  v-bind:src="car.image"
+                  alt="audi_a6"
+                  class="img-thumbnail w-100"
+                />
+              </div>
+              <div class="col-8">
+                <div
+                  class="mb-3 d-flex align-items-center justify-content-between"
+                >
+                  <h3>{{ car.brand }} {{ car.model }}</h3>
+                  <h6>
+                    {{car.year}} | USD {{ car.price_usd }} |
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </h6>
+                </div>
+
+                <p class="mb-3">{{car.description}}</p>
+                <div class="mb-2">
+                  <button class="btn btn-success me-2">
+                    <i class="fas fa-cart-plus"></i> Buy
+                  </button>
+                  <button class="btn btn-outline-secondary me-2">
+                    <i class="far fa-plus-square"></i> More Info
+                  </button>
+                  <button class="btn btn-outline-secondary me-2">
+                    <i class="fas fa-share"></i> Share
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+          </div>
+          <!-- end car -->
+        </div>
+        <!-- end filters  & cars section -->
+      </div>
+    </div>
+
+    <!-- start of footer -->
+    <div id="footer" class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="index.html"
+              ><img
+                id="footer-logo"
+                src="img/automotora_vip_logo.png"
+                alt="AutoVIP"
+            /></a>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <ul>
+              <li><a href="sales.html">Brand New Cars</a></li>
+              <li><a href="sales.html">Used Cars</a></li>
+            </ul>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contact-modal"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3">
+            <p style="color: #ddd">Copyright &copy; AutoVIP 2021</p>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- end of footer -->
+
+    <!-- start modal -->
+    <div id="contact-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header mb-3">
+            <h5 class="modal-title mb-3">Contact</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body mb-3">
+            <form>
+              <div class="form-group mb-3">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value=""
+                  class="form-control mb-3"
+                  placeholder="Place your full name here..."
+                />
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value=""
+                  class="form-control mb-3"
+                  placeholder="Place your e-mail address here..."
+                />
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group mb-3">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  rows="8"
+                  cols="40"
+                  class="form-control mb-3"
+                  placeholder="Place your message here..."
+                ></textarea>
+              </div>
+              <!-- /.form-group -->
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of modal -->
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS de Bootstrap -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS de Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- JS Propio -->
+    <script src="js/app.js"></script>
+    <script src="js/sales.js"></script>
+  </body>
+</html>

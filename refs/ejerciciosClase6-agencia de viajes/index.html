@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expedia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-nav-expedia">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.svg" alt="expedia" height="25px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-image bg-img-expedia">
+      <div class="container-sm">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8">
+            <div id="search-bar">
+              <!-- buscador -->
+              <h4>
+                <strong>
+                  Buscar Vuelos <i class="fas fa-plane-departure"></i
+                ></strong>
+              </h4>
+
+              <div class="input-group rounded mt-3">
+                <input
+                  type="text"
+                  class="form-control rounded"
+                  placeholder="Ingrese una ciudad..."
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <button
+                  class="btn button-search"
+                  type="button"
+                  id="button-search"
+                >
+                  <i class="fas fa-search"></i> Buscar
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- fin de buscador -->
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+      <!-- cards container -->
+      <div class="row align-items-center">
+        <div class="col-md my-2">
+          <div class="card">
+            <img
+              src="img/playa_del_carmen.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title"><strong>Playa del Carmen</strong></h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
+                magni harum quod sint deleniti nam et deserunt libero natus
+                molestias tempora quidem, excepturi architecto dolorum corrupti
+                consequuntur! Consectetur, reprehenderit velit.
+              </p>
+              <a href="#" class="btn button"
+                ><strong><i class="fas fa-shopping-cart"></i>Comprar</strong></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md my-2">
+          <div class="card">
+            <img src="img/san_andres.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><strong>San Andres</strong></h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
+                magni harum quod sint deleniti nam et deserunt libero natus
+                molestias tempora quidem, excepturi architecto dolorum corrupti
+                consequuntur! Consectetur, reprehenderit velit.
+              </p>
+              <a href="#" class="btn button"
+                ><strong><i class="fas fa-shopping-cart"></i>Comprar</strong></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md my-2">
+          <div class="card">
+            <img src="img/buzios.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><strong>Buzios</strong></h5>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+                quam delectus possimus nobis similique voluptas quis architecto
+                officiis, ducimus provident aut? Possimus velit aut quod, modi
+                quibusdam praesentium exercitationem molestiae.
+              </p>
+              <a href="#" class="btn button">
+                <strong><i class="fas fa-shopping-cart"></i>Comprar</strong></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-expedia"><strong>© 2021 Expedia</strong></div>
+  </body>
+</html>

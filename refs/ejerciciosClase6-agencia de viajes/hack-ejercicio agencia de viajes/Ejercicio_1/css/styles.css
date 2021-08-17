@@ -1,0 +1,45 @@
+#header {
+  background-color: #ffff00;
+}
+
+.btn-light {
+  background-color: #ffff00;
+  border-color: #ffea00;
+}
+
+.btn-light:hover {
+  background-color: #ffd600;
+  border-color: #ffd600;
+}
+
+#header-logo {
+  height: 30px;
+}
+
+#intro {
+  background: url("../img/playa.jpg");
+  background-size: cover;
+  padding: 100px 0;
+  margin-bottom: 40px;
+}
+
+#buscador {
+  background-color: #00000098;
+  border-radius: 4px;
+  padding: 30px;
+  color: white;
+}
+
+#buscador h2 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin: 0 0 20px 0;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 90px 0;
+  background-color: #111111;
+  color: white;
+  text-align: center;
+}
