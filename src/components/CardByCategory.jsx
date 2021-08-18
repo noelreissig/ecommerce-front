@@ -6,7 +6,9 @@ import cardByCategoryStyles from "./cardByCategory.module.css";
 function CardByCategory() {
   return (
     <div>
-      <Card className="shadow my-4 mx-3 d-flex text-align-center">
+      <Card
+        className={`${cardByCategoryStyles.cardHover} shadow my-4 mx-3 d-flex text-align-center`}
+      >
         <Card.Img
           variant="top"
           className={cardByCategoryStyles.images}

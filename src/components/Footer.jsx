@@ -21,7 +21,7 @@ function Footer() {
                   <a href="#">Dormitorio</a>
                 </li>{" "}
                 <li>
-                  <a href="#">Jardin</a>
+                  <a href="#">Jardín</a>
                 </li>{" "}
                 <li>
                   <a href="#">Complementos</a>

@@ -1,12 +1,29 @@
 .hero {
-  padding-top: 5rem;
+  padding-top: 10rem;
   text-align: start;
   color: white;
-  font-family: "STIX Two Text", serif;
+  /* font-family: "STIX Two Text", serif; */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero p {
+  width: 66%;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .homeImgBackground {
-  background-image: url(../img/home.jpg);
+  background-image: linear-gradient(
+      -45deg,
+      rgba(130, 130, 130, 0.1516981792717087) 0%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    url(../img/home.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21,5 +38,9 @@
   .hero {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .hero p {
+    width: 75%;
+    font-size: 1rem;
   }
 }

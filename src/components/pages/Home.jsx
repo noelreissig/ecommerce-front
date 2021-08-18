@@ -4,6 +4,7 @@ import Hero from "../Hero";
 import Footer from "../Footer";
 import NavComponent from "../Navbar";
 import homeStyles from "./home.module.css";
+import App from "../../App.css";
 
 function Home() {
   return (
