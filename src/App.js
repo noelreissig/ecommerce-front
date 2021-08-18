@@ -5,7 +5,7 @@ import NoMatch from "./components/NoMatch";
 import Contact from "./components/pages/Contact";
 import AboutUs from "./components/pages/AboutUs";
 import Categories from "./components/pages/Categories";
-import OneProduct from "./components/pages/OneProduct";
+import OneProduct from "./components/pages/OneProduct1";
 
 function App() {
 	return (
