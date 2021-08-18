@@ -1,0 +1,25 @@
+.hero {
+  padding-top: 5rem;
+  text-align: start;
+  color: white;
+  font-family: "STIX Two Text", serif;
+}
+
+.homeImgBackground {
+  background-image: url(../img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

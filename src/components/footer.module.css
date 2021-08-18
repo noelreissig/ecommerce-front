@@ -2,7 +2,7 @@ footer {
   background-color: black;
 }
 
-a,
+footer a,
 a:link,
 a:visited,
 a:active {
@@ -11,6 +11,17 @@ a:active {
   font-size: 0.8rem;
 }
 
-a:hover {
+footer a:hover {
   color: lightgrey;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* .decoList li {
+    text-align: left;
+  } */
 }
