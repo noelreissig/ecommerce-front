@@ -1,5 +1,4 @@
 import React from "react";
-import AccordionComponent from "./Accordion";
 import NavComponent from "../Navbar";
 import OneProductStyles from "./oneProduct.module.css";
 
@@ -8,79 +7,97 @@ function OneProduct() {
     <div>
       <NavComponent />
       <div className="container">
-        <div className="row">
-          <div className="col-md-6">
+        <div className="row gx-0 mt-4">
+          <div className="col-md-6 ">
             <img
-              className={`${OneProductStyles.imgCard} img-fluid`}
+              className={`${OneProductStyles.imgCard} img-fluid rounded`}
               src="../img/comedor/2.mesa_dos.webp"
               alt="comedor"
             />
           </div>
-          <div className="col-md-6 text-start">
-            <h3>
-              Mesa Redonda Shanelle De Terrazo - Negro Y Madera Maciza Acacia Ø
-              120 Cm
-            </h3>
-            <p>USD1.665</p>
-            <p>
+          <div className="col-md-6  text-start">
+            <h2>Mesa Redonda Shanelle De Terrazo</h2>
+            <h3>USD 1.665</h3>
+            <p className="fw-light fs-6">
               Deja que el terrazo sea el protagonista de tu casa. Shanelle llega
               con una nueva versión, con el sobre que tanto nos gusta acompañado
               de madera maciza de acacia para un acabado perfecto. Marca
               tendencia con materiales naturales y auténticos como tú.
             </p>
+            <hr />
+            <div className="mb-3 d-flex">
+              <select
+                class="form-select w-25 me-5 fs-6"
+                aria-label="Default select example"
+              >
+                <option value="" selected>
+                  Cantidad
+                </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <button className="btn btn-dark w-100">Comprar</button>
+            </div>
 
-            <p className="fw-bold">Características</p>
+            <div className="my-1">
+              <p className="fw-bold fs-6">Características</p>
+              <table class="table table-hover">
+                <thead>
+                  <tbody>
+                    <tr>
+                      <td>Medidas: </td>
+                      <td className="text-end fw-light">
+                        Al77 x An120 x Pr120 (cm)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tipo: </td>
+                      <td className="text-end fw-light"> Fija </td>
+                    </tr>
+                    <tr>
+                      <td>Material: </td>
+                      <td className="text-end fw-light">
+                        Madera maciza, Terrazo
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Ambiente: </td>
+                      <td className="text-end fw-light"> Comedor </td>
+                    </tr>
+                    <tr>
+                      <td>Estilo: </td>
+                      <td className="text-end fw-light"> Colonial, Rústico </td>
+                    </tr>
+                  </tbody>
+                </thead>
+              </table>
+            </div>
 
-            <table class="table table-hover">
-              <thead>
-                <tbody>
-                  <tr>
-                    <td>Medidas: </td>
-                    <td className="text-end fw-light">Al77 x An120 x Pr120 (cm)</td>
-                  </tr>
-                  <tr>
-                    <td>Tipo: </td>
-                    <td className="text-end fw-light"> Fija </td>
-                  </tr>
-                  <tr>
-                    <td>Material: </td>
-                    <td className="text-end fw-light"> Madera maciza, Terrazo </td>
-                  </tr>
-                  <tr>
-                    <td>Ambiente: </td>
-                    <td className="text-end fw-light"> Comedor </td>
-                  </tr>
-                  <tr>
-                    <td>Estilo: </td>
-                    <td className="text-end fw-light"> Colonial, Rústico </td>
-                  </tr>
-                </tbody>
-              </thead>
-            </table>
+            <div>
+              <p className="fw-bold my-1">Descripción</p>
+              <p>
+                Mesa redonda con sobre terrazo Ø 120 cm con fondo blanco y
+                madera maciza de acacia. <br />
+                Estructura hecha con madera maciza de acacia con un acabado
+                blanqueado. <br />
+                Se trata de una pieza con un diseño adaptable para interiores y
+                preparada para exteriores. <br />
+                Esta mesa pertenece a la colección Shanelle, con diferentes
+                acabados disponibles para sobre y estructura.
+              </p>
+              <p className="fw-bold my-1">Garantía</p>
+              <p>2 años a partir de la compra</p>
+              <p className="fw-bold my-1">Métodos y costos de envío</p>
+              <p>
+                A todo Montevideo: Envío sin costo en compras mayores a USD 100
+                | Costo normal: USD 6 <br />
+                A todo el país vía DAC: Costo variable según tamaño del paquete.
+                <br />A todo Maldonado vía DePunta: Costo variable según tamaño
+                del paquete.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="mt-5">
-          <h4> Descripción</h4>
-          <hr />
-          <AccordionComponent />
-          {/* <h4 className="text-start">Detalles técnicos</h4>
-          <p className="fw-bold text-start">Más detalles</p>
-          <p className="text-start">
-            Mesa redonda con sobre terrazo Ø 120 cm con fondo blanco y madera
-            maciza de acacia.
-          </p>
-          <p className="text-start">
-            Estructura hecha con madera maciza de acacia con un acabado
-            blanqueado.
-          </p>
-          <p className="text-start">
-            Se trata de una pieza con un diseño adaptable para interiores y
-            preparada para exteriores.
-          </p>
-          <p className="text-start">
-            Esta mesa pertenece a la colección Shanelle, con diferentes acabados
-            disponibles para sobre y estructura.
-          </p> */}
         </div>
       </div>
     </div>
