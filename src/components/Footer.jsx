@@ -1,4 +1,5 @@
 import React from "react";
+// import { a } from "react-router-dom";
 import footerStyles from "./footer.module.css";
 
 function Footer() {
@@ -6,50 +7,45 @@ function Footer() {
     <div>
       <footer id="footer">
         <div className="container">
-          <div className="row">
-            <div className="col-md-3">
-              <a href="index.html">
-                <div>
-                  <img
-                    id="footer-logo"
-                    src="img/automotora_vip_logo.png"
-                    alt="AutoVIP"
-                  />
-                </div>
-              </a>
-            </div>
-
-            <div className="col-md-3">
-              <ul>
+          <div className="row d-flex pt-3 text-white">
+            <div className="col-md-6 ps-0 text-start">
+              <div>Secciones</div>
+              <ul className="list-unstyled">
                 <li>
-                  <a href="sales.html">Brand New Cars</a>
+                  <a href="#">Living</a>
                 </li>
                 <li>
-                  <a href="sales.html">Used Cars</a>
+                  <a href="#">Comedor</a>
+                </li>
+                <li>
+                  <a href="#">Dormitorio</a>
+                </li>{" "}
+                <li>
+                  <a href="#">Jardin</a>
+                </li>{" "}
+                <li>
+                  <a href="#">Complementos</a>
                 </li>
               </ul>
             </div>
-
-            <div className="col-md-3">
-              <ul>
-                <li>
-                  <a href="about.html">About</a>
-                </li>
+            <div className="col-md-6 pe-0 text-end">
+              <ul className="list-unstyled">
                 <li>
                   <a
                     href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#contact-modal"
                   >
-                    Contact
+                    Contacto
                   </a>
+                </li>
+                <li>
+                  <a href="#">Sobre Nosotros</a>
                 </li>
               </ul>
             </div>
-
-            <div className="col-md-3">
-              <p classNameName="color: #ddd">Copyright &copy; AutoVIP 2021</p>
-            </div>
+            <hr />
+            <span className="pb-4"> Deco Hack. 2021 ®</span>
           </div>
         </div>
       </footer>
