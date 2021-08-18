@@ -1,35 +1,43 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function NavComponent() {
 	return (
 		<div>
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="black" variant="dark" fixed="top" expand="md">
 				<Container>
 					<Navbar.Brand href="#home">Deco-Hack</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto">
-							<Nav.Link to="home">Home</Nav.Link>
-							<Nav.Link to="aboutus">About Us</Nav.Link>
+							<Nav.Link href="/">Home</Nav.Link>
+
 							<NavDropdown title="Categorías" id="basic-nav-dropdown">
-								<NavDropdown.Item to="comedor">Comedor</NavDropdown.Item>
-								<NavDropdown.Item to="living">Living</NavDropdown.Item>
-								<NavDropdown.Item to="dormitorio">
+								<NavDropdown.Item href="/comedor">
+									Comedor
+								</NavDropdown.Item>
+								<NavDropdown.Item href="/living">Living</NavDropdown.Item>
+								<NavDropdown.Item href="/dormitorio">
 									Dormitorio
 								</NavDropdown.Item>
-								<NavDropdown.Item to="jardin">Jardin</NavDropdown.Item>
-								<NavDropdown.Item to="complementos">
+								<NavDropdown.Item href="/jardin">Jardin</NavDropdown.Item>
+								<NavDropdown.Item href="/complementos">
 									Complementos
 								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
-								</NavDropdown.Item>
 							</NavDropdown>
+							<Nav.Link href="aboutus">About Us</Nav.Link>
+							<Nav.Link href="aboutus">Contacto</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
+
+					<Nav className="d-flex flex-row justify-content-end">
+						<Nav.Link href="/cart" className="me-3">
+							<i className="text-secondary  fas fa-shopping-cart"></i>
+						</Nav.Link>
+						<Nav.Link href="aboutus" className="block">
+							Username
+						</Nav.Link>
+					</Nav>
 				</Container>
 			</Navbar>
 		</div>
