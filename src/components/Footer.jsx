@@ -28,8 +28,8 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-md-6 pe-0 text-end">
-              <ul className="list-unstyled deco-list">
+            <div className={`col-md-6 pe-0 text-end ${footerStyles.decoList}`}>
+              <ul className="list-unstyled ">
                 <li>
                   <a href="#">Sobre Nosotros</a>
                 </li>
@@ -45,7 +45,9 @@ function Footer() {
               </ul>
             </div>
             <hr className="mt-4 text-white" />
-            <span className="pb-4 text-white"> Deco-Hack. 2021 ®</span>
+            <span className="pb-4 text-white text-center">
+              Deco-Hack. 2021 ®
+            </span>
           </div>
         </div>
       </footer>
