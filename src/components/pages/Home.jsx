@@ -4,7 +4,6 @@ import Hero from "../Hero";
 import Footer from "../Footer";
 import NavComponent from "../Navbar";
 import homeStyles from "./home.module.css";
-import App from "../../App.css";
 
 function Home() {
   return (
@@ -12,19 +11,21 @@ function Home() {
       <NavComponent />
       <Hero />
       <div className="container">
-        <h2 className="pt-3">Te ayudamos a transformar tu hogar</h2>
-        <div className="row">
-          <div className="col-sm-4">
+        <h2 className="py-5 text-center">
+          ¡Te ayudamos a transformar tu hogar!
+        </h2>
+        <div className="row d-flex justify-content-center pb-4">
+          <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
-                className="img-fluid rounded"
+                className={`img-fluid rounded `}
                 src="../img/1_comedor_opcionDos.webp"
                 alt="comedor"
               />
-              <h3>Comedor</h3>
+              <h3 className="">Comedor</h3>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
                 className="img-fluid rounded"
@@ -34,7 +35,7 @@ function Home() {
               <h3>Living</h3>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
                 className="img-fluid rounded"
@@ -46,7 +47,7 @@ function Home() {
           </div>
         </div>
         <div className="row d-flex justify-content-center">
-          <div className="col-sm-4">
+          <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
                 className="img-fluid rounded"
@@ -56,7 +57,7 @@ function Home() {
               <h3>Jardin</h3>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
                 className="img-fluid rounded"
