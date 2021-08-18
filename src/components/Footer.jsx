@@ -45,7 +45,7 @@ function Footer() {
               </ul>
             </div>
             <hr className="mt-4 text-white" />
-            <span className="pb-4 text-white"> Deco Hack. 2021 ®</span>
+            <span className="pb-4 text-white"> Deco-Hack. 2021 ®</span>
           </div>
         </div>
       </footer>
