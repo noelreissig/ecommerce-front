@@ -7,7 +7,11 @@ function CardByCategory() {
   return (
     <div>
       <Card className="shadow my-4 mx-3 d-flex text-align-center">
-        <Card.Img variant="top" src="./img/comedor/2.mesa_dos.webp" />
+        <Card.Img
+          variant="top"
+          className={cardByCategoryStyles.images}
+          src="./img/comedor/2.mesa_dos.webp"
+        />
         <Card.Body>
           <Card.Title>Mesa de comedor redonda</Card.Title>
           <Card.Text>
