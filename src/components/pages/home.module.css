@@ -14,14 +14,15 @@
   padding-top: 5rem;
   text-align: start;
   color: white;
+  font-family: "STIX Two Text", serif;
 }
 nav {
   background-color: black;
   position: fixed;
 }
-/* .cardCategory img {
-  height: 20rem;
-} */
+.cardCategory {
+  text-align: start;
+}
 
 /* footer {
   position: fixed;
