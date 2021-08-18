@@ -1,0 +1,30 @@
+.homeImgBackground {
+  background-image: url(../../img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: -1;
+}
+
+.hero {
+  padding-top: 5rem;
+  text-align: start;
+  color: white;
+}
+nav {
+  background-color: black;
+  position: fixed;
+}
+/* .cardCategory img {
+  height: 20rem;
+} */
+
+/* footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+} */
