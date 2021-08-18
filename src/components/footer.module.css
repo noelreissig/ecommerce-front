@@ -1,3 +1,16 @@
 footer {
   background-color: black;
 }
+
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #9b9b9b;
+  font-size: 0.8rem;
+}
+
+a:hover {
+  color: lightgrey;
+}
