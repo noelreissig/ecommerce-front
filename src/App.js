@@ -6,7 +6,7 @@ import Contact from "./components/pages/Contact";
 import AboutUs from "./components/pages/AboutUs";
 import Categories from "./components/pages/Categories";
 import OneProduct from "./components/pages/OneProduct";
-import Admin from "./components/pages/Admin";
+import Admin from "./components/admin/Admin";
 
 function App() {
   return (
