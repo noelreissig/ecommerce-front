@@ -1,6 +1,6 @@
 import Footer from "../Footer";
 import NavComponent from "../Navbar";
-import TableAdmin from "../TableAdmin";
+import TableAdmin from "./TableAdmin";
 
 import adminStyles from "./admin.module.css";
 
