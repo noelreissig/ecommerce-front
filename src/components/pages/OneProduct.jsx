@@ -2,12 +2,13 @@ import React from "react";
 import CarouselOneProduct from "../CarouselOneProduct";
 import NavComponent from "../Navbar";
 import OneProductStyles from "./oneProduct.module.css";
+import Footer from "../Footer";
 
 function OneProduct() {
   return (
     <div>
       <NavComponent />
-      <div className="container">
+      <div className="container pb-5">
         <div className="row gx-0 mt-4">
           <div className="col-md-6 mt-5">
             <CarouselOneProduct />
@@ -95,15 +96,14 @@ function OneProduct() {
               <p className="fw-bold my-1">Métodos y costos de envío</p>
               <p className={`${OneProductStyles.sizeText} fw-light`}>
                 A todo Montevideo: Envío sin costo en compras mayores a USD 100
-                | Costo normal: USD 6 <br />
-                A todo el país vía DAC: Costo variable según tamaño del paquete.
-                <br />A todo Maldonado vía DePunta: Costo variable según tamaño
-                del paquete.
+                | Costo normal: USD 6 <br />A todo el país vía DAC: Costo
+                variable según tamaño del paquete.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
