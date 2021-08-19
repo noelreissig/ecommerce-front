@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-
+import ModalAdmin from "./ModalAdmin";
 import tableStyles from "./tableStyles.module.css";
 
 const TableAdmin = () => {
@@ -28,7 +28,7 @@ const TableAdmin = () => {
             <td>USD 500</td>
             <td>5</td>
             <td>
-              <i class="fas fa-edit"></i>
+              <ModalAdmin />
             </td>
             <td>
               <i class="far fa-trash-alt"></i>
@@ -42,7 +42,7 @@ const TableAdmin = () => {
             <td>USD 500</td>
             <td>5</td>
             <td>
-              <i class="fas fa-edit"></i>
+              <ModalAdmin />
             </td>
             <td>
               <i class="far fa-trash-alt"></i>
@@ -56,7 +56,7 @@ const TableAdmin = () => {
             <td>USD 500</td>
             <td>5</td>
             <td>
-              <i class="fas fa-edit"></i>
+              <ModalAdmin />
             </td>
             <td>
               <i class="far fa-trash-alt"></i>
@@ -70,7 +70,7 @@ const TableAdmin = () => {
             <td>USD 500</td>
             <td>5</td>
             <td>
-              <i class="fas fa-edit"></i>
+              <ModalAdmin />
             </td>
             <td>
               <i class="far fa-trash-alt"></i>
@@ -84,7 +84,7 @@ const TableAdmin = () => {
             <td>USD 500</td>
             <td>5</td>
             <td>
-              <i class="fas fa-edit"></i>
+              <ModalAdmin />
             </td>
             <td>
               <i class="far fa-trash-alt"></i>
