@@ -3,9 +3,9 @@ footer {
 }
 
 footer a,
-a:link,
-a:visited,
-a:active {
+footer a:link,
+footer a:visited,
+footer a:active {
   text-decoration: none;
   color: #9b9b9b;
   font-size: 0.8rem;
