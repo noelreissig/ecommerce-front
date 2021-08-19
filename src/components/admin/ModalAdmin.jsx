@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Form } from "react-bootstrap";
 import { useState } from "react";
 
 function ModalAdmin() {
@@ -16,15 +16,39 @@ function ModalAdmin() {
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Editar Perfil</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Form.Group className=" mx-3 " controlId="formBasicText">
+            <Form.Label className="my-1">Nombre</Form.Label>
+            <Form.Control size="sm" type="name" />
+          </Form.Group>
+          <Form.Group className=" mx-3 " controlId="formBasicText">
+            <Form.Label className="my-1">Apellido</Form.Label>
+            <Form.Control size="sm" type="name" />
+          </Form.Group>
+          <Form.Group className=" mx-3" controlId="formBasicText">
+            <Form.Label className="my-1">Dirección</Form.Label>
+            <Form.Control size="sm" type="text" />
+          </Form.Group>
+          <Form.Group className=" mx-3" controlId="formBasicNumber">
+            <Form.Label className="my-1">Teléfono</Form.Label>
+            <Form.Control size="sm" type="number" />
+          </Form.Group>
+          <Form.Group className=" mx-3" controlId="formBasicEmail">
+            <Form.Label className="my-1">Email</Form.Label>
+            <Form.Control size="sm" type="email" />
+          </Form.Group>
+          <Form.Group className="mb-4 mx-3" controlId="formBasicPassword">
+            <Form.Label className="my-1">Contraseña</Form.Label>
+            <Form.Control size="sm" type="password" />
+          </Form.Group>
+
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
+            <Button variant="success" onClick={handleClose}>
+              Guardar cambios
             </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
+            <Button variant="secondary" onClick={handleClose}>
+              Cancelar
             </Button>
           </Modal.Footer>
         </Modal>
