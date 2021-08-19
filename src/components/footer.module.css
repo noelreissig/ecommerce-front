@@ -1,5 +1,8 @@
 footer {
   background-color: black;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
 }
 
 footer a,
@@ -16,9 +19,15 @@ footer a:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .responsive {
+    text-align: center;
+  }
   footer {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    flex-direction: column;
+    text-align: center;
   }
 
   /* .decoList li {

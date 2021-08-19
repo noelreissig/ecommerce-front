@@ -4,12 +4,12 @@ import footerStyles from "./footer.module.css";
 
 function Footer() {
   return (
-    <div>
+    <div className={footerStyles.responsive}>
       <footer id="footer">
         <div className="container">
-          <div className="row d-flex pt-4 ">
-            <div className="col-md-6 ps-0 text-start">
-              <div className="text-white">Secciones</div>
+          <div className="row g-0 d-flex pt-4 text-center justify-content-center">
+            <div className="col-md-3 ps-0">
+              <div className="text-white">Categorías</div>
               <ul className="list-unstyled deco-list">
                 <li>
                   <a href="#">Living</a>
@@ -28,10 +28,11 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className={`col-md-6 pe-0 text-end ${footerStyles.decoList}`}>
-              <ul className="list-unstyled ">
+            <div className={`col-md-3 pe-0 ${footerStyles.decoList}`}>
+              <div className="text-white">Sobre Nosotros</div>
+              <ul className="list-unstyled">
                 <li>
-                  <a href="#">Sobre Nosotros</a>
+                  <a href="#">Quienes somos?</a>
                 </li>
                 <li>
                   <a
