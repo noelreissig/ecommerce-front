@@ -1,10 +1,12 @@
-.imgCard {
+/* .imgCard {
   width: 100%;
   padding: 10%;
-}
-p {
-  font-size: 0.7rem;
-}
+} */
+
 td {
   font-size: 0.7rem;
+}
+
+.sizeText {
+  font-size: 0.8rem;
 }
