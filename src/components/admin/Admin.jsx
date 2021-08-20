@@ -9,7 +9,9 @@ function Admin() {
     <div>
       <NavComponent />
       <div className="container">
-        <h2 className={`${adminStyles.admin} container`}>Panel de Control</h2>
+        <h2 className={`${adminStyles.admin} container`}>
+          Gestion de Productos
+        </h2>
         <TableAdmin />
       </div>
 

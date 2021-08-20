@@ -10,7 +10,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/comedor/3.mesa.webp"
+                src="./img/complementos/2A_lampara.webp"
                 alt="Second slide"
               />
             </div>

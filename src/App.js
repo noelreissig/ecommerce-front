@@ -22,7 +22,7 @@ function App() {
           {/* <Route path="/:categories" component={Categories} /> */}
           <Route path="/producto/mesa-redonda" component={OneProduct} />
           {/* <Route path="/producto/:productName" component={OneProduct} /> */}
-          <Route path="/admin" component={Admin} />
+          <Route path="/admin/productos" component={Admin} />
           <Route component={NoMatch} />
         </Switch>
       </div>
