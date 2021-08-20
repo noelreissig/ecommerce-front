@@ -11,43 +11,43 @@ const CarouselDestacado = () => {
               <img
                 className="d-block w-100"
                 src="./img/complementos/2A_lampara.webp"
-                alt="Second slide"
+                alt="Lampara"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/complementos/2.luminaria.jpg"
-                alt="Second slide"
+                src="./img/complementos/3B_almohadon.webp"
+                alt="Almohadon"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/3_dormitorio.webp"
-                alt="Second slide"
+                src="./img/living/8b-mesa.webp"
+                alt="Mesa"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/jardin/2_sillas_jardin.webp"
-                alt="Second slide"
+                src="../img/dormitorio/3b_mesaLuz.webp"
+                alt="Mesa Luz"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/living/8_sofa_dos_cuerpos.webp"
-                alt="Second slide"
+                src="../img/living/5b-butaca.webp"
+                alt="Butaca"
               />
             </div>
 
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/comedor/4.mesa.webp"
-                alt="Second slide"
+                src="../img/dormitorio/7A_comoda.webp"
+                alt="Comoda"
               />
             </div>
           </div>
@@ -57,44 +57,44 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/comedor/3.mesa.webp"
-                alt="Second slide"
+                src="./img/complementos/2A_lampara.webp"
+                alt="Lampara"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/3_dormitorio.webp"
-                alt="Second slide"
+                src="./img/complementos/3B_almohadon.webp"
+                alt="Almohadon"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/complementos/2.luminaria.jpg"
-                alt="Second slide"
+                src="./img/living/8b-mesa.webp"
+                alt="Mesa"
+              />
+            </div>
+            <div className="col-2">
+              <img
+                className="d-block w-100"
+                src="../img/dormitorio/3b_mesaLuz.webp"
+                alt="Mesa Luz"
+              />
+            </div>
+            <div className="col-2">
+              <img
+                className="d-block w-100"
+                src="../img/living/5b-butaca.webp"
+                alt="Butaca"
               />
             </div>
 
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/comedor/4.mesa.webp"
-                alt="Second slide"
-              />
-            </div>
-            <div className="col-2">
-              <img
-                className="d-block w-100"
-                src="../img/jardin/2_sillas_jardin.webp"
-                alt="Second slide"
-              />
-            </div>
-            <div className="col-2">
-              <img
-                className="d-block w-100"
-                src="../img/living/8_sofa_dos_cuerpos.webp"
-                alt="Second slide"
+                src="../img/dormitorio/7A_comoda.webp"
+                alt="Comoda"
               />
             </div>
           </div>
