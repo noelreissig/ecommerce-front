@@ -1,0 +1,15 @@
+.borderBox {
+  border: 1px solid black;
+  z-index: 1;
+  opacity: 1;
+}
+
+.borderBox:hover {
+  transform: scale(1.1);
+}
+.subtitulo {
+  color: black;
+}
+.Link {
+  text-decoration: none;
+}

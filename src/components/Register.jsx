@@ -22,26 +22,16 @@ function Register({ setRegister, setLogin, ...props }) {
         <Offcanvas show={show} onHide={handleClose} {...props}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>
-              <h5 className="text-center">Registrarse</h5>
+              <h5 className={`${registerStyles.register}`}>Registrarse</h5>
             </Offcanvas.Title>
           </Offcanvas.Header>
+          <hr className="mx-4 my-1" />
           <Offcanvas.Body>
             <div>
               <div
-                className={`${registerStyles.registerFormContainer} bg-light
-        rounded
-        shadow-lg
-        m-2
-        mt-5
-        mx-auto`}
+                className={`${registerStyles.registerFormContainer} rounded shadow-lg`}
               >
                 <form className="p-4">
-                  <img
-                    className={registerStyles.iconoTwitterIndex}
-                    src="../img/logo.png"
-                    alt="icono"
-                  />
-                  <h3 className="text-center pb-3">Crea tu cuenta</h3>
                   <label className="form-label mt-2 mb-1" htmlFor="firstname">
                     Nombre
                   </label>
@@ -103,8 +93,7 @@ function Register({ setRegister, setLogin, ...props }) {
                     required
                   />
                   <button
-                    type="submit"
-                    className="btn btn-primary mt-4 rounded-lg w-100"
+                    className={`${registerStyles.btnRegister} btn btn-dark mt-4 rounded-lg w-100`}
                   >
                     Registrarte
                   </button>

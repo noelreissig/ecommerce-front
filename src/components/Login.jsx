@@ -16,16 +16,15 @@ function Login({ setLogin, startShow = true, ...props }) {
           Login
         </Button>
         <Offcanvas show={show} onHide={handleClose} {...props}>
-          <Offcanvas.Header closeButton>
+          <Offcanvas.Header closeButton className={loginStyles.btnClose}>
             <Offcanvas.Title>
-              <h5 className={`${loginStyles.login} text-center`}>
-                Iniciar sesión
-              </h5>
+              <h2 className={`${loginStyles.login}`}>Iniciar sesión</h2>
             </Offcanvas.Title>
           </Offcanvas.Header>
+          <hr className="mx-4 my-1" />
           <Offcanvas.Body>
             <div
-              className={`${loginStyles.loginFormContainer} container mt-3 shadow rounded`}
+              className={`${loginStyles.loginFormContainer} container shadow rounded`}
             >
               <form method="post">
                 <div className="mb-3">
@@ -59,21 +58,21 @@ function Login({ setLogin, startShow = true, ...props }) {
                   />
                 </div>
 
-                <button className="btn btn-primary mt-2 mb-2 rounded-lg w-100">
+                <button
+                  className={`${loginStyles.btnLogin} btn btn-dark mt-2 w-100 rounded-lg `}
+                >
                   Iniciar sesión
                 </button>
-                <div
-                  className={`${loginStyles.colorLetter} pt-4 pb-1 text-center`}
-                >
+                <div className=" pt-4 pb-1 text-center">
                   <p>
                     Aún no tienes cuenta?
-                    <Link
+                    <Link className="ms-2"
                       onClick={() => {
                         toggleShow();
                         setLogin((prev) => !prev);
                       }}
                     >
-                      Regístrate
+                       Regístrate
                     </Link>
                   </p>
                 </div>

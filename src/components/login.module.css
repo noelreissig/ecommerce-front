@@ -1,13 +1,3 @@
-/* Iconos para el index, login, registro */
-.iconoTwitterIndex {
-  max-width: 60px;
-}
-.h2Login {
-  font-size: 31px;
-  font-weight: 800;
-  font-style: inherit;
-  font-family: Verdana, "Segoe UI", Helvetica, Arial, sans-serif;
-}
 .loginFormContainer {
   max-width: 400px;
 }
@@ -15,20 +5,20 @@
 .containerTotalLogin {
   margin-top: 140px;
 }
-
-.colorLetter {
-  color: #000000;
-}
 .login {
   font-size: 20px;
-  font-weight: 800;
-  font-style: inherit;
+  font-weight: 900;
+  margin-left: 6rem;
+  margin-top: 1.8rem;
   font-family: Verdana, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 .btnLogin {
-  width: 300px;
   text-align: center;
-  border: 1px solid #000000;
+  border: 4px solid #ffffff;
   border-radius: 9999px;
   min-height: 48px;
+}
+.btnClose {
+  font-size: 0.8rem;
+  margin: 0;
 }
