@@ -9,7 +9,7 @@ function NavComponent() {
   const [register, setRegister] = useState(false);
 
   return (
-    <div>
+    <div style={{ paddingBottom: "10px" }}>
       <Navbar bg="black" variant="dark" fixed="top" expand="md">
         <Container>
           <Navbar.Brand href="#home">Deco-Hack</Navbar.Brand>

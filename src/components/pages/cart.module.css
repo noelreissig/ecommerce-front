@@ -1,0 +1,16 @@
+.stylesCart {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.stylesCart img {
+  max-height: 100px;
+}
+
+.stylesCart row {
+  max-height: 100px;
+}
+
+.stylesCart td {
+  font-size: 0.8rem;
+}

@@ -6,9 +6,9 @@ import adminStyles from "./admin.module.css";
 
 function Admin() {
   return (
-    <div>
+    <div className="">
       <NavComponent />
-      <div className="container">
+      <div className="container min-vh-100">
         <h2 className={`${adminStyles.admin} container`}>
           Gestion de Productos
         </h2>

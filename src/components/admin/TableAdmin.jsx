@@ -4,7 +4,7 @@ import tableStyles from "./tableStyles.module.css";
 
 const TableAdmin = () => {
   return (
-    <div className={`${tableStyles.font} pb-2`}>
+    <div className={`${tableStyles.font} pb-2 table-responsive-md`}>
       <Table striped bordered hover>
         <thead>
           <tr className="text-center">
