@@ -23,7 +23,28 @@ nav {
 .cardCategory {
   text-align: start;
 }
-.linkDecoration {
+.linkDecoration,
+.linkDecoration:visited,
+.linkDecoration:active {
   text-decoration: none;
   color: black;
 }
+.linkDecoration:hover {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+/* 
+.linkDecoration:hover img {
+  box-shadow: 5px rgb(92, 92, 92);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 #0000009d, 0 6px 20px 0 #0000007e;
+}
+
+.linkDecoration img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+} */
