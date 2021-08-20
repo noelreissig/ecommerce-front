@@ -9,14 +9,14 @@ function CarouselOneProduct() {
         <Carousel.Item>
           <img
             className={`${carouselOneProductStyle.imgCarousel} w-100 `}
-            src="../img/comedor/2.mesa_dos.webp"
+            src="../img/comedor/2A_mesa.webp"
             alt="2.mesa"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className={`${carouselOneProductStyle.imgCarousel} w-100 `}
-            src="../img/comedor/1.mesa.webp"
+            src="../img/comedor/1A_mesa.webp"
             alt="1.mesa"
           />
         </Carousel.Item>
