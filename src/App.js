@@ -7,6 +7,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Categories from "./components/pages/Categories";
 import OneProduct from "./components/pages/OneProduct";
 import Admin from "./components/admin/Admin";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
           <Route path="/contact" component={Contact} />
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/comedor" component={Categories} />

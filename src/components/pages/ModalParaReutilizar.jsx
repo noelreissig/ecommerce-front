@@ -4,7 +4,6 @@ import { useState } from "react";
 
 function ModalAdmin() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -14,7 +13,7 @@ function ModalAdmin() {
           <i class="fas fa-edit"></i>
         </Button>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} enctype="multipart/form-data">
           <Modal.Header closeButton>
             <Modal.Title>Editar Perfil</Modal.Title>
           </Modal.Header>
@@ -38,10 +37,20 @@ function ModalAdmin() {
             <Form.Label className="my-1">Email</Form.Label>
             <Form.Control size="sm" type="email" />
           </Form.Group>
-          <Form.Group className="mb-4 mx-3" controlId="formBasicPassword">
+          <Form.Group className=" mx-3" controlId="formBasicPassword">
             <Form.Label className="my-1">Contraseña</Form.Label>
             <Form.Control size="sm" type="password" />
           </Form.Group>
+          <Form.Label className="my-1 mx-3">Imágen</Form.Label>
+          <input
+            class="form-control my-1 mx-3 w-auto mb-4"
+            id="image"
+            placeholder="Enter article background image here..."
+            name="image"
+            type="file"
+            accept="image/png, image/jpg, image/svg"
+            required
+          ></input>
 
           <Modal.Footer>
             <Button variant="success" onClick={handleClose}>

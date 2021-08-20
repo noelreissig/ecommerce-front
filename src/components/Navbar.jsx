@@ -1,7 +1,13 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { useState } from "react";
 import React from "react";
+import Login from "./Login";
+import Register from "./Register";
 
 function NavComponent() {
+  const [login, setLogin] = useState(true);
+  const [register, setRegister] = useState(false);
+
   return (
     <div>
       <Navbar bg="black" variant="dark" fixed="top" expand="md">
@@ -35,6 +41,21 @@ function NavComponent() {
             <Nav.Link href="aboutus" className="block">
               Admin
             </Nav.Link>
+            <Nav href="/login" className="block">
+              {login ? (
+                <Login
+                  placement={"end"}
+                  setLogin={setLogin}
+                  startShow={register}
+                />
+              ) : (
+                <Register
+                  placement={"end"}
+                  setLogin={setLogin}
+                  setRegister={setRegister}
+                />
+              )}
+            </Nav>
           </Nav>
         </Container>
       </Navbar>

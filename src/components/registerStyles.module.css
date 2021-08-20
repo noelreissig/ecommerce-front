@@ -1,0 +1,25 @@
+/* Iconos para el index, login, registro */
+.iconoTwitterIndex {
+  max-width: 60px;
+}
+
+/* Registro */
+.registerFormContainer {
+  max-width: 600px;
+}
+
+.btn-register {
+  width: 300px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  min-height: 48px;
+}
+
+.btn-register {
+  width: 300px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  min-height: 48px;
+}
