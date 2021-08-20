@@ -38,7 +38,7 @@ function NavComponent() {
             <Nav.Link href="/cart" className="me-3">
               <i className="text-secondary  fas fa-shopping-cart"></i>
             </Nav.Link>
-            <Nav.Link href="aboutus" className="block">
+            <Nav.Link href="/admin" className="block">
               Admin
             </Nav.Link>
             <Nav href="/login" className="block">

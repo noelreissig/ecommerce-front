@@ -7,7 +7,8 @@ import AboutUs from "./components/pages/AboutUs";
 import Categories from "./components/pages/Categories";
 import OneProduct from "./components/pages/OneProduct";
 import Admin from "./components/admin/Admin";
-import Login from "./components/Login";
+import HomeAdmin from "./components/admin/HomeAdmin";
+import AdminCategorys from "./components/admin/AdminCategorys";
 import Cart from "./components/pages/Cart";
 
 function App() {
@@ -16,16 +17,17 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/contact" component={Contact} />
-          {/*no deberia ser en ingles?*/}
-          <Route path="/aboutus" component={AboutUs} />{" "}
-          {/*no deberia ser en ingles?*/}
+          <Route path="/contacto" component={Contact} />
+
+          <Route path="/sobre-nosotros" component={AboutUs} />
+
           <Route path="/comedor" component={Categories} />
           {/* <Route path="/:categories" component={Categories} /> */}
           <Route path="/producto/mesa-redonda" component={OneProduct} />
           {/* <Route path="/producto/:productName" component={OneProduct} /> */}
           <Route path="/carrito" component={Cart} />
+          <Route exact path="/admin" component={HomeAdmin} />
+          <Route exact path="/admin/categorias" component={AdminCategorys} />
           <Route path="/admin/productos" component={Admin} />
           <Route component={NoMatch} />
         </Switch>
