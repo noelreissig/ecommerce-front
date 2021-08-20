@@ -12,15 +12,17 @@ function OneProduct() {
         <div className="row gx-0 mt-4">
           <div className="col-md-6 mt-5">
             <CarouselOneProduct />
-            {/* <img
-              className={`${OneProductStyles.imgCard} img-fluid rounded`}
-              src="../img/comedor/2.mesa_dos.webp"
-              alt="comedor"
-            /> */}
           </div>
           <div className="col-md-6 text-start">
             <h2 className="pt-5">Mesa Redonda Shanelle De Terrazo</h2>
-            <h3>USD 1.665</h3>
+            <div className="d-flex">
+              <h5 className="d-flex">USD 1.665</h5>
+              <p className={`${OneProductStyles.sizeText} fw-light ms-2 mt-1`}>
+                Financiá tu compra
+                <span className="text-success fw-bold"> sin intereses*</span>
+              </p>
+            </div>
+
             <p className="fw-light">
               Deja que el terrazo sea el protagonista de tu casa. Shanelle llega
               con una nueva versión, con el sobre que tanto nos gusta acompañado
@@ -28,6 +30,19 @@ function OneProduct() {
               tendencia con materiales naturales y auténticos como tú.
             </p>
             <hr />
+            <div className="d-flex justify-content-between">
+              <p className="fw-light">
+                Disponibilidad:
+                <span className="text-success fw-bold fw-light"> En Stock</span>
+              </p>
+              {/* <p
+                className={`${OneProductStyles.sizeText} fw-light d-flex justify-content-end`}
+              >
+                <i class="fas fa-truck me-2 "></i>{" "}
+                Compra ahora y recíbelo en los proximos 3 dias
+              </p> */}
+            </div>
+
             <div className="mb-3 d-flex">
               <select
                 class="form-select w-25 me-5"
