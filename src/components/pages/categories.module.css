@@ -2,3 +2,13 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+.linkDecoration {
+  text-decoration: none;
+  color: black;
+}
+.linkdecoration:hover,
+.linkDecoration:visited,
+.linkDecoration:active {
+  text-decoration: none;
+  color: black;
+}

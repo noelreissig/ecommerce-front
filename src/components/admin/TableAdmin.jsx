@@ -8,12 +8,12 @@ const TableAdmin = () => {
       <Table striped bordered hover>
         <thead>
           <tr className="text-center">
-            <th>#</th>
-            <th>Producto</th>
-            <th>Modelo</th>
+            <th>Id</th>
+            <th>Nombre</th>
             <th>Categoria</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Destacado</th>
             <th>Editar</th>
             <th>Borrar</th>
           </tr>
@@ -30,7 +30,7 @@ const TableAdmin = () => {
               <i class="fas fa-edit"></i>
             </td>
             <td>
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt btn btn-white"></i>
             </td>
           </tr>
           <tr className="text-center">
@@ -44,7 +44,7 @@ const TableAdmin = () => {
               <i class="fas fa-edit"></i>
             </td>
             <td>
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt  btn btn-white"></i>
             </td>
           </tr>
           <tr className="text-center">
@@ -58,7 +58,7 @@ const TableAdmin = () => {
               <i class="fas fa-edit"></i>
             </td>
             <td>
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt  btn btn-white"></i>
             </td>
           </tr>
           <tr className="text-center">
@@ -72,7 +72,7 @@ const TableAdmin = () => {
               <i class="fas fa-edit"></i>
             </td>
             <td>
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt  btn btn-white"></i>
             </td>
           </tr>
           <tr className="text-center">
@@ -86,7 +86,7 @@ const TableAdmin = () => {
               <i class="fas fa-edit"></i>
             </td>
             <td>
-              <i class="far fa-trash-alt"></i>
+              <i class="far fa-trash-alt  btn btn-white"></i>
             </td>
           </tr>
         </tbody>

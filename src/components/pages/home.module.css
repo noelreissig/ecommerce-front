@@ -23,3 +23,7 @@ nav {
 .cardCategory {
   text-align: start;
 }
+.linkDecoration {
+  text-decoration: none;
+  color: black;
+}

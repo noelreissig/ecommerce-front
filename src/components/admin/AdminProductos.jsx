@@ -1,23 +1,23 @@
-import React from "react";
-import SiderAdmin from "./SiderAdmin";
 import Footer from "../Footer";
-import adminStyles from "./admin.module.css";
 import NavComponent from "../Navbar";
+import TableAdmin from "./TableAdmin";
+import SiderAdmin from "./SiderAdmin";
+import adminStyles from "./admin.module.css";
 
-function Admin() {
+function AdminProductos() {
   return (
-    <div className="">
+    <div>
       <NavComponent />
       <div className="container min-vh-100">
         <h2 className={`${adminStyles.admin} text-center`}>
-          Ganancias en Deco-Hack
+          Gestion de Productos
         </h2>
         <div className="row px-0">
           <div className="col-md-3 w-auto ">
             <SiderAdmin />
           </div>
-          <div className="col-md-9 d-flex justify-content-center">
-            <img className="img-fluid" src="img\dashboard.png" alt="" />
+          <div className="col-md-9 text-center">
+            <TableAdmin />
           </div>
         </div>
       </div>
@@ -26,5 +26,4 @@ function Admin() {
     </div>
   );
 }
-
-export default Admin;
+export default AdminProductos;

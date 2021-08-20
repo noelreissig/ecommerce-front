@@ -4,6 +4,7 @@ import Hero from "../Hero";
 import Footer from "../Footer";
 import NavComponent from "../Navbar";
 import homeStyles from "./home.module.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -16,14 +17,16 @@ function Home() {
         </h2>
         <div className="row d-flex justify-content-center pb-4">
           <div className="col-sm-3">
-            <div className={homeStyles.cardCategory}>
-              <img
-                className={`img-fluid rounded `}
-                src="../img/1_comedor_opcionDos.webp"
-                alt="comedor"
-              />
-              <h3 className="">Comedor</h3>
-            </div>
+            <Link to="/comedor" className={homeStyles.linkDecoration}>
+              <div className={homeStyles.cardCategory}>
+                <img
+                  className={`img-fluid rounded `}
+                  src="../img/1_comedor_opcionDos.webp"
+                  alt="comedor"
+                />
+                <h3 className="">Comedor</h3>
+              </div>
+            </Link>
           </div>
           <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
