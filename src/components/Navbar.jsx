@@ -35,7 +35,7 @@ function NavComponent() {
           </Navbar.Collapse>
 
           <Nav className="d-flex flex-row justify-content-end">
-            <Nav.Link href="/cart" className="me-3">
+            <Nav.Link href="/carrito" className="me-3">
               <i className="text-secondary  fas fa-shopping-cart"></i>
             </Nav.Link>
             <Nav.Link href="/admin" className="block">
