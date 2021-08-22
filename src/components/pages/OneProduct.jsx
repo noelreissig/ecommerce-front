@@ -13,8 +13,12 @@ function OneProduct() {
           <div className="col-md-6 mt-5">
             <CarouselOneProduct />
           </div>
-          <div className="col-md-6 text-start">
-            <h2 className="pt-5">Mesa Redonda Shanelle De Terrazo</h2>
+          <div className="col-md-6 text-start pt-5">
+            <h2 className=" d-flex justify-content-between">
+              Mesa Redonda Shanelle De Terrazo
+              <i class=" far fa-heart text-danger fs-5"></i>
+            </h2>
+
             <div className="d-flex">
               <h5 className="d-flex">USD 1.665</h5>
               <p className={`${OneProductStyles.sizeText} fw-light ms-2 mt-1`}>
