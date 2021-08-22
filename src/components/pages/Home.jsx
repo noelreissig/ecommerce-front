@@ -6,7 +6,19 @@ import NavComponent from "../Navbar";
 import homeStyles from "./home.module.css";
 import { Link } from "react-router-dom";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 function Home() {
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    const getCategory = async () => {
+      const response = await axios.get(`http://localhost:3001/api/category`);
+      setCategory(response.data);
+    };
+    getCategory();
+  }, []);
+  console.log(category);
   return (
     <div>
       <NavComponent />
@@ -16,11 +28,12 @@ function Home() {
           ¡Te ayudamos a transformar tu hogar!
         </h2>
         <div className="row d-flex justify-content-center pb-4">
+          {/*para .map */}
           <div className="col-sm-3">
             <Link to="/comedor" className={homeStyles.linkDecoration}>
               <div className={homeStyles.cardCategory}>
                 <img
-                  className={`img-fluid rounded `}
+                  className={`img-fluid rounded`}
                   src="../img/1_comedor_opcionDos.webp"
                   alt="comedor"
                 />
@@ -28,6 +41,7 @@ function Home() {
               </div>
             </Link>
           </div>
+          {/*para .map */}
           <div className="col-sm-3">
             <div className={homeStyles.cardCategory}>
               <img
