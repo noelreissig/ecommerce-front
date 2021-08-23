@@ -23,6 +23,16 @@ nav {
 .cardCategory {
   text-align: start;
 }
+
+.cardCategory img {
+  /* padding-left: 1rem;
+  padding-right: 1rem;
+  width: 75%;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .linkDecoration,
 .linkDecoration:visited,
 .linkDecoration:active {
@@ -34,17 +44,11 @@ nav {
   color: #3a3a3a;
 }
 
-/* 
-.linkDecoration:hover img {
-  box-shadow: 5px rgb(92, 92, 92);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px 0 #0000009d, 0 6px 20px 0 #0000007e;
+@media screen and (max-width: 600px) {
+  .cardCategory img {
+    width: 80%;
+  }
+  .cardCategory h3 {
+    text-align: center;
+  }
 }
-
-.linkDecoration img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-} */
