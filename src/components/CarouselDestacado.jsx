@@ -24,7 +24,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/living/8b-mesa.webp"
+                src="./img/living/8B_mesa.webp"
                 alt="Mesa"
               />
             </div>
@@ -38,7 +38,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/living/5b-butaca.webp"
+                src="../img/living/5B_butaca.webp"
                 alt="Butaca"
               />
             </div>
@@ -71,7 +71,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/living/8b-mesa.webp"
+                src="./img/living/8B_mesa.webp"
                 alt="Mesa"
               />
             </div>
@@ -85,7 +85,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/living/5b-butaca.webp"
+                src="../img/living/5B_butaca.webp"
                 alt="Butaca"
               />
             </div>
