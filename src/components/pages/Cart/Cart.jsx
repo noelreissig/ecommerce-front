@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../Footer";
-import { Navbar } from "react-bootstrap";
-import { CartTable } from "../CartTable";
-import NavComponent from "../Navbar";
+import Footer from "../../Footer/Footer";
+// import { Navbar } from "react-bootstrap";
+import  CartTable  from "../../CartTable/CartTable";
+import NavComponent from "../../Navbar/Navbar";
 import cartStyles from "./cart.module.css";
 
 const Cart = () => {

@@ -1,8 +1,8 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { useState } from "react";
 import React from "react";
-import Login from "./Login";
-import Register from "./Register";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
 
 function NavComponent() {
   const [login, setLogin] = useState(true);
@@ -29,8 +29,8 @@ function NavComponent() {
                   Complementos
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="aboutus">Nosotros</Nav.Link>
-              <Nav.Link href="aboutus">Contacto</Nav.Link>
+              <Nav.Link href="sobre-nosotros">Nosotros</Nav.Link>
+              <Nav.Link href="contacto">Contacto</Nav.Link>
             </Nav>
           </Navbar.Collapse>
 
@@ -38,9 +38,7 @@ function NavComponent() {
             <Nav.Link href="/carrito" className="me-3">
               <i className="text-secondary  fas fa-shopping-cart"></i>
             </Nav.Link>
-            <Nav.Link href="/admin" className="block">
-              Admin
-            </Nav.Link>
+
             <Nav href="/login" className="block">
               {login ? (
                 <Login

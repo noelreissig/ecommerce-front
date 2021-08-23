@@ -1,9 +1,9 @@
 import { Form } from "react-bootstrap";
-import NavComponent from "../Navbar";
+import NavComponent from "../../Navbar/Navbar";
 function Contact() {
 	return (
 		<div>
-			<div>
+			<div className="mt-5 ">
 				<NavComponent />
 				<div className={`p-3 text-center`}>
 					<h1>Habla con nosotros</h1>

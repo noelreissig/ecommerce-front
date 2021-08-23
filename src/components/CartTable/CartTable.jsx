@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import cartStyles from "./cart.module.css";
+import cartStyles from "./cartTable.module.css";
 
 export const CartTable = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import CarouselDestacado from "../CarouselDestacado";
-import Hero from "../Hero";
-import Footer from "../Footer";
-import NavComponent from "../Navbar";
+import CarouselDestacado from "../../CarouselDestacado";
+import Hero from "../../Hero/Hero";
+import Footer from "../../Footer/Footer";
+import NavComponent from "../../Navbar/Navbar";
 import homeStyles from "./home.module.css";
 import { Link } from "react-router-dom";
 
