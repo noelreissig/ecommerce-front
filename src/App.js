@@ -19,8 +19,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/contacto" component={Contact} />
           <Route path="/sobre-nosotros" component={AboutUs} />
-          <Route path="/comedor" component={Categories} />
-          {/* <Route path="/:categories" component={Categories} /> */}
+          {/* <Route path="/comedor" component={Categories} /> */}
+          <Route path="/:categories" component={Categories} />
           <Route path="/producto/mesa-redonda" component={OneProduct} />
           {/* <Route path="/producto/:productName" component={OneProduct} /> */}
           <Route path="/carrito" component={Cart} />

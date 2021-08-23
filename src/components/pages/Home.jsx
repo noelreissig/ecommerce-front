@@ -37,7 +37,7 @@ function Home() {
                 <div className={homeStyles.cardCategory}>
                   <img
                     className={`img-fluid rounded shadow`}
-                    src="../img/1_comedor_opcionDos.webp"
+                    src={category.photo_url}
                     alt="comedor"
                   />
 
