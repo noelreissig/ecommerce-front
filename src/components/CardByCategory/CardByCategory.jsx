@@ -11,7 +11,7 @@ function CardByCategory() {
         <Card.Img
           variant="top"
           className={cardByCategoryStyles.images}
-          src="./img/comedor/4A_mesa.webp"
+          src="../img/comedor/4A_mesa.webp"
         />
         <Card.Body>
           <Card.Title>Mesa de comedor redonda</Card.Title>
