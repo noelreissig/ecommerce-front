@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-
-import cardByCategoryStyles from "./cardByCategory.module.css";
+import cardByCategoryStyles from "../CardByCategory/cardByCategory.module.css";
 
 function CardByCategory() {
   return (
@@ -20,7 +19,7 @@ function CardByCategory() {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </Card.Text>
-          <Button  variant="outline-secondary" className="rounded-pill">
+          <Button variant="outline-secondary" className="rounded-pill">
             Ver más
           </Button>
         </Card.Body>

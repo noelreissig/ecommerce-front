@@ -1,5 +1,5 @@
-import Footer from "../Footer";
-import NavComponent from "../Navbar";
+import Footer from "../../Footer/Footer";
+import NavComponent from "../../Navbar/Navbar";
 function AboutUs() {
 	return (
 		<div>

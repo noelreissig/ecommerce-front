@@ -1,8 +1,8 @@
 import React from "react";
-import CarouselOneProduct from "../CarouselOneProduct";
-import NavComponent from "../Navbar";
-import OneProductStyles from "./oneProduct.module.css";
-import Footer from "../Footer";
+import CarouselOneProduct from "../../CarouselOneProduct/CarouselOneProduct";
+import NavComponent from "../../Navbar/Navbar";
+import OneProductStyles from "../OneProduct/oneProduct.module.css";
+import Footer from "../../Footer/Footer";
 
 function OneProduct() {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import NavComponent from "../Navbar";
-import Hero from "../Hero";
-import CardByCategory from "../CardByCategory";
-import Footer from "../Footer";
+import NavComponent from "../../Navbar/Navbar";
+import Hero from "../../Hero/Hero";
+import CardByCategory from "../../CardByCategory/CardByCategory";
+import Footer from "../../Footer/Footer";
 import categoriesStyles from "./categories.module.css";
 import { Link } from "react-router-dom";
 

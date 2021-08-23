@@ -1,15 +1,12 @@
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/Home/Home";
 import NoMatch from "./components/NoMatch";
-import Contact from "./components/pages/Contact";
-import AboutUs from "./components/pages/AboutUs";
-import Categories from "./components/pages/Categories";
-import OneProduct from "./components/pages/OneProduct";
-import Admin from "./components/admin/Admin";
-import AdminProductos from "./components/admin/AdminProductos";
-import AdminCategorys from "./components/admin/AdminCategorys";
-import Cart from "./components/pages/Cart";
+import Contact from "./components/pages/Contact/Contact";
+import AboutUs from "./components/pages/AboutUs/AboutUs";
+import Categories from "./components/pages/Categories/Categories";
+import OneProduct from "./components/pages/OneProduct/OneProduct";
+import Cart from "./components/pages/Cart/Cart";
 
 function App() {
   return (
@@ -24,9 +21,6 @@ function App() {
           <Route path="/producto/mesa-redonda" component={OneProduct} />
           {/* <Route path="/producto/:productName" component={OneProduct} /> */}
           <Route path="/carrito" component={Cart} />
-          <Route exact path="/admin" component={Admin} />
-          <Route path="/admin/categorias" component={AdminCategorys} />
-          <Route path="/admin/productos" component={AdminProductos} />
           <Route component={NoMatch} />
         </Switch>
       </div>
