@@ -1,12 +1,24 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import axios from "axios";
 
 function NavComponent() {
   const [login, setLogin] = useState(true);
   const [register, setRegister] = useState(false);
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    const getCategories = async () => {
+      const response = await axios({
+        method: "get",
+        url: `http://localhost:3001/api/category`,
+      });
+      setCategories(response.data);
+    };
+    getCategories();
+  }, []);
 
   return (
     <div style={{ paddingBottom: "10px" }}>
@@ -19,15 +31,11 @@ function NavComponent() {
               <Nav.Link href="/">Inicio</Nav.Link>
 
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/comedor">Comedor</NavDropdown.Item>
-                <NavDropdown.Item href="/living">Living</NavDropdown.Item>
-                <NavDropdown.Item href="/dormitorio">
-                  Dormitorio
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/jardin">Jardín</NavDropdown.Item>
-                <NavDropdown.Item href="/complementos">
-                  Complementos
-                </NavDropdown.Item>
+                {categories.map((category) => (
+                  <NavDropdown.Item href={`${category.name}`}>
+                    {category.name}
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
               <Nav.Link href="sobre-nosotros">Nosotros</Nav.Link>
               <Nav.Link href="contacto">Contacto</Nav.Link>
