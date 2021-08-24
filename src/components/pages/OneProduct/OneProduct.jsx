@@ -11,22 +11,18 @@ import { useParams } from "react-router-dom";
 function OneProduct() {
   const { slug } = useParams();
   const [product, setProduct] = useState([]);
+  
   useEffect(() => {
     const getProduct = async () => {
-      const response = await axios.get(
-        ` http://localhost:3001/api/product/${slug}`
-      );
+      const response = await axios({
+        method: "get",
+        url: `http://localhost:3001/api/product/${slug}`,
+      });
       setProduct(response.data);
     };
     getProduct();
   }, []);
   console.log("Product", product);
-
-  // useEffect(() => {
-  //   if (products && products.length > 0) {
-  //     setProducts(products);
-  //   }
-  // });
 
   return (
     <div>

@@ -13,11 +13,15 @@ function Home() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const getCategories = async () => {
-      const response = await axios.get(`http://localhost:3001/api/category`);
+      const response = await axios({
+        method: "get",
+        url: `http://localhost:3001/api/category`,
+      });
       setCategories(response.data);
     };
     getCategories();
   }, []);
+
   // console.log(categories);
   return (
     <div>
