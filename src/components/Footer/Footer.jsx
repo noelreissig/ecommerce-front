@@ -1,6 +1,7 @@
 import React from "react";
 // import { a } from "react-router-dom";
 import footerStyles from "./footer.module.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -12,19 +13,19 @@ function Footer() {
               <div className="text-white">Categorías</div>
               <ul className="list-unstyled deco-list">
                 <li>
-                  <a href="#">Living</a>
+                  <Link to="">Living</Link>
                 </li>
                 <li>
-                  <a href="#">Comedor</a>
+                  <Link to="">Comedor</Link>
                 </li>
                 <li>
-                  <a href="#">Dormitorio</a>
+                  <Link to="">Dormitorio</Link>
                 </li>{" "}
                 <li>
-                  <a href="#">Jardín</a>
+                  <Link to="">Jardín</Link>
                 </li>{" "}
                 <li>
-                  <a href="#">Complementos</a>
+                  <Link to="">Complementos</Link>
                 </li>
               </ul>
             </div>
@@ -32,16 +33,16 @@ function Footer() {
               <div className="text-white">Sobre Nosotros</div>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Quienes somos?</a>
+                  <Link to="">Quienes somos?</Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to=""
                     data-bs-toggle="modal"
                     data-bs-target="#contact-modal"
                   >
                     Contacto
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
