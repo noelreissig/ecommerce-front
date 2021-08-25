@@ -29,10 +29,12 @@ function NavComponent() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Inicio</Nav.Link>
-
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 {categories.map((category) => (
-                  <NavDropdown.Item href={`${category.name}`}>
+                  <NavDropdown.Item
+                    href={`${category.name}`}
+                    key={category.name}
+                  >
                     {category.name}
                   </NavDropdown.Item>
                 ))}
