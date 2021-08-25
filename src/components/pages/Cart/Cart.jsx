@@ -7,6 +7,8 @@ import cartStyles from "./cart.module.css";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
+	const shoppingCart = useSelector((state) => state.cartReducer);
+
 	return (
 		<>
 			<NavComponent />
@@ -22,7 +24,17 @@ const Cart = () => {
 						<div className="d-flex justify-content-between pb-3">
 							<span>Subtotal Productos</span>
 							<span>
-								<strong>USD 1000</strong>
+								<strong>
+									USD{" "}
+									{shoppingCart.length > 0
+										? shoppingCart.reduce(
+												(acum, item) =>
+													acum +
+													item.prod.price * item.quantity,
+												0
+										  )
+										: Number(0)}
+								</strong>
 							</span>
 						</div>
 						<div className="d-flex justify-content-between">
@@ -35,7 +47,17 @@ const Cart = () => {
 						<div className="d-flex justify-content-between">
 							<span>Total</span>
 							<span>
-								<strong>USD 1000</strong>
+								<strong>
+									USD{" "}
+									{shoppingCart.length > 0
+										? shoppingCart.reduce(
+												(acum, item) =>
+													acum +
+													item.prod.price * item.quantity,
+												0
+										  )
+										: Number(0)}
+								</strong>
 							</span>
 						</div>
 						<hr />
