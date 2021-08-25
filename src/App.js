@@ -4,7 +4,7 @@ import Home from "./components/pages/Home/Home";
 import NoMatch from "./components/NoMatch";
 import Contact from "./components/pages/Contact/Contact";
 import AboutUs from "./components/pages/AboutUs/AboutUs";
-import Categories from "./components/pages/Categories/Categories";
+import Category from "./components/pages/Category/Category";
 import OneProduct from "./components/pages/OneProduct/OneProduct";
 import Cart from "./components/pages/Cart/Cart";
 
@@ -19,7 +19,7 @@ function App() {
 					{/* <Route path="/comedor" component={Categories} /> */}
 					<Route path="/carrito" component={Cart} />
 					<Route path="/producto/:slug" component={OneProduct} />
-					<Route path="/:categories" component={Categories} />
+					<Route path="/:categories" component={Category} />
 					{/* <Route path="/producto/:productName" component={OneProduct} /> */}
 					<Route component={NoMatch} />
 				</Switch>
