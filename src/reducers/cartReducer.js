@@ -2,18 +2,19 @@ export default function cartReducer(shoppingCart = [], action) {
 	switch (action.type) {
 		case "ADD_ITEM": {
 			const itemFound = shoppingCart.findIndex(
-				(item) => item.id === action.payload.product.id
+				(item) => item.prod.id === action.payload.item.id
 			);
-			if (itemFound) {
+			if (itemFound === -1) {
+				return [
+					...shoppingCart,
+					{ prod: action.payload.item, quantity: action.payload.quantity },
+				];
+			} else {
 				shoppingCart[itemFound].quantity = action.payload.quantity;
 				return [...shoppingCart];
-			} else {
-				return [...shoppingCart, action.payload.product];
 			}
 		}
-		case "UPDATE_ITEM": {
-			return shoppingCart;
-		}
+
 		case "REMOVE_ITEM": {
 			const itemFound = shoppingCart.findIndex(
 				(item) => item.id === action.payload.product.id

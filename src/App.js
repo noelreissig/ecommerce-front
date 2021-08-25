@@ -9,23 +9,23 @@ import OneProduct from "./components/pages/OneProduct/OneProduct";
 import Cart from "./components/pages/Cart/Cart";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/contacto" component={Contact} />
-          <Route path="/sobre-nosotros" component={AboutUs} />
-          {/* <Route path="/comedor" component={Categories} /> */}
-          <Route path="/producto/:slug" component={OneProduct} />
-          <Route path="/:categories" component={Categories} />
-          {/* <Route path="/producto/:productName" component={OneProduct} /> */}
-          <Route path="/carrito" component={Cart} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route path="/contacto" component={Contact} />
+					<Route path="/sobre-nosotros" component={AboutUs} />
+					{/* <Route path="/comedor" component={Categories} /> */}
+					<Route path="/carrito" component={Cart} />
+					<Route path="/producto/:slug" component={OneProduct} />
+					<Route path="/:categories" component={Categories} />
+					{/* <Route path="/producto/:productName" component={OneProduct} /> */}
+					<Route component={NoMatch} />
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
