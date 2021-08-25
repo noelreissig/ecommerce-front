@@ -13,7 +13,7 @@ function OneProduct() {
 	const { slug } = useParams();
 	const [product, setProduct] = useState([]);
 	const dispatch = useDispatch();
-	const [quantity, setQuantity] = useState(0);
+	const [quantity, setQuantity] = useState(1);
 	useEffect(() => {
 		const getProduct = async () => {
 			const response = await axios.get(
@@ -82,7 +82,7 @@ function OneProduct() {
 									onClick={() => handleBuy()}
 									className="btn btn-dark w-100"
 								>
-									Comprar
+									Añadir al carrito
 								</button>
 							</div>
 

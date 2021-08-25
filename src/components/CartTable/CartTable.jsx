@@ -2,10 +2,17 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import cartStyles from "./cartTable.module.css";
+import { useDispatch } from "react-redux";
 
 export const CartTable = () => {
+	const dispatch = useDispatch();
 	const shoppingCart = useSelector((state) => state.cartReducer);
 
+	function handleDelete(id) {
+		console.log(id);
+		console.log({ type: "REMOVE_ITEM", payload: id });
+		dispatch({ type: "REMOVE_ITEM", payload: id });
+	}
 	return (
 		<div>
 			<div className={`${cartStyles.font} table-responsive-md container`}>
@@ -28,9 +35,10 @@ export const CartTable = () => {
 									<td className="text-center align-middle">
 										<img
 											className={`img-fluid`}
-											src="../img/1_comedor_opcionDos.webp"
+											src={`../img${item.prod.picture_url}`}
 											alt="comedor"
 										/>
+										{console.log(item.prod.picture_url)}
 									</td>
 									<td className="text-center align-middle">
 										{item.prod.price}
@@ -42,7 +50,10 @@ export const CartTable = () => {
 										{item.prod.price * item.quantity}
 									</td>
 									<td className="text-center align-middle">
-										<i class="far fa-trash-alt"></i>
+										<i
+											onClick={() => handleDelete(item.prod.id)}
+											class="far fa-trash-alt"
+										></i>
 									</td>
 								</tr>
 							);
