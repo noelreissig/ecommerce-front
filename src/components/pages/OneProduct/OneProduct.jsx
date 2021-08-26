@@ -127,11 +127,14 @@ function OneProduct() {
                 </p>
                 <p className="fw-bold my-1">Garantía</p>
                 <p className={`${OneProductStyles.sizeText} fw-light`}>
-                  {product.warranty}
+                  2 años
                 </p>
                 <p className="fw-bold my-1">Métodos y costos de envío</p>
                 <p className={`${OneProductStyles.sizeText} fw-light`}>
-                  {product.delivery}
+                  A todo Montevideo: Envío sin costo en compras mayores a USD
+                  100 A todo el país vía DAC: Costo variable según tamaño del
+                  paquete. A todo Maldonado vía DePunta: Costo variable según
+                  tamaño del paquete.
                 </p>
               </div>
             </div>
