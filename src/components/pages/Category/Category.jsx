@@ -18,13 +18,13 @@ function Categories() {
     const getCategory = async () => {
       const response = await axios({
         method: "get",
-        url: `http://localhost:3001/api/product/${categories}`,
+        url: `http://localhost:3001/api/product/category/${categories}`,
       });
       setCategory(response.data);
     };
     getCategory();
   }, []);
-  console.log(category);
+  // console.log(category);
 
   return (
     <div>
@@ -33,36 +33,37 @@ function Categories() {
 
       <div className={`${categoriesStyles.stylesCategories} container`}>
         <div className="row">
-          {category.map((eachProduct) => (
-            <div className="col-md-3 ">
-              <Link
-                to={`/producto/${eachProduct.slug}`}
-                className={categoriesStyles.linkDecoration}
-              >
-                <div>
-                  <Card
-                    className={`${cardByCategoryStyles.cardHover} shadow my-4 mx-3 d-flex text-align-center`}
-                  >
-                    <Card.Img
-                      variant="top"
-                      className={cardByCategoryStyles.images}
-                      src="../img/comedor/4A_mesa.webp"
-                    />
-                    <Card.Body>
-                      <Card.Title> {eachProduct.name} </Card.Title>
-                      <Card.Text> USD {eachProduct.price}</Card.Text>
-                      <Button
-                        variant="outline-secondary"
-                        className="rounded-pill"
-                      >
-                        Ver más
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </Link>
-            </div>
-          ))}
+          {category &&
+            category.map((eachProduct) => (
+              <div className="col-md-3 " key={eachProduct.name}>
+                <Link
+                  to={`/producto/${eachProduct.slug}`}
+                  className={categoriesStyles.linkDecoration}
+                >
+                  <div>
+                    <Card
+                      className={`${cardByCategoryStyles.cardHover} shadow my-4 mx-3 d-flex text-align-center`}
+                    >
+                      <Card.Img
+                        variant="top"
+                        className={cardByCategoryStyles.images}
+                        src="../img/comedor/4A_mesa.webp"
+                      />
+                      <Card.Body>
+                        <Card.Title> {eachProduct.name} </Card.Title>
+                        <Card.Text> USD {eachProduct.price}</Card.Text>
+                        <Button
+                          variant="outline-secondary"
+                          className="rounded-pill"
+                        >
+                          Ver más
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </Link>
+              </div>
+            ))}
         </div>
       </div>
 

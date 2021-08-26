@@ -24,11 +24,11 @@ function NavComponent() {
     <div style={{ paddingBottom: "10px" }}>
       <Navbar bg="black" variant="dark" fixed="top" expand="md">
         <Container>
-          <Navbar.Brand href="#home">Deco-Hack</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Brand href="/">Deco-Hack</Navbar.Brand>
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Inicio</Nav.Link>
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 {categories.map((category) => (
                   <NavDropdown.Item
