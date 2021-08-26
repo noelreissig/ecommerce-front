@@ -47,7 +47,8 @@ function Categories() {
                       <Card.Img
                         variant="top"
                         className={cardByCategoryStyles.images}
-                        src="../img/comedor/4A_mesa.webp"
+                        src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${eachProduct.picture_url}`}
+                        alt={eachProduct.name}
                       />
                       <Card.Body>
                         <Card.Title> {eachProduct.name} </Card.Title>

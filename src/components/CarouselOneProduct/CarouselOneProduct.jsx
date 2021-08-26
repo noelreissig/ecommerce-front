@@ -9,15 +9,15 @@ function CarouselOneProduct({ product }) {
         <Carousel.Item>
           <img
             className={`${carouselOneProductStyle.imgCarousel} w-100 `}
-            src="../img/comedor/2A_mesa.webp" 
-            alt="2.mesa"
+            src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${product.picture_url}`}
+            alt={product.name}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
             className={`${carouselOneProductStyle.imgCarousel} w-100 `}
-            src="../img/comedor/1A_mesa.webp"
-            alt="1.mesa"
+            src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${product.picture_2_url}`}
+            alt={product.name}
           />
         </Carousel.Item>
       </Carousel>

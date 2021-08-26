@@ -32,7 +32,7 @@ function NavComponent() {
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 {categories.map((category) => (
                   <NavDropdown.Item
-                    href={`${category.name}`}
+                    href={`/${category.name}`}
                     key={category.name}
                   >
                     {category.name}

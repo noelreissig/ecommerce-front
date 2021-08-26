@@ -41,8 +41,8 @@ function Home() {
                 <div className={homeStyles.cardCategory}>
                   <img
                     className={`img-fluid rounded shadow`}
-                    src={category.photo_url}
-                    alt="comedor"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_CAT}/${category.photo_url}`}
+                    alt={category.name}
                   />
 
                   <h3 className="pt-2">{category.name}</h3>

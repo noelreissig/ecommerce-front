@@ -92,31 +92,28 @@ function OneProduct() {
                   <thead>
                     <tbody>
                       <tr>
-                        <td>Medidas: </td>
-                        <td className="text-end fw-light">
-                          Al77 x An120 x Pr120 (cm)
+                        <td>
+                          <strong>Medidas:</strong>
                         </td>
+                        <td className="text-end fw-light">Consultar</td>
                       </tr>
                       <tr>
-                        <td>Tipo: </td>
-                        <td className="text-end fw-light"> Fija </td>
-                      </tr>
-                      <tr>
-                        <td>Material: </td>
-                        <td className="text-end fw-light">
-                          Madera maciza, Terrazo
+                        <td>
+                          <strong>Tipo:</strong>
                         </td>
+                        <td className="text-end fw-light">Doméstico</td>
                       </tr>
                       <tr>
-                        <td>Ambiente: </td>
-                        <td className="text-end fw-light"> Comedor </td>
-                      </tr>
-                      <tr>
-                        <td>Estilo: </td>
-                        <td className="text-end fw-light">
-                          {" "}
-                          Colonial, Rústico{" "}
+                        <td>
+                          <strong>Estilo:</strong>
                         </td>
+                        <td className="text-end fw-light">Contemporáneo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Temporada:</strong>
+                        </td>
+                        <td className="text-end fw-light">2021-2022</td>
                       </tr>
                     </tbody>
                   </thead>
