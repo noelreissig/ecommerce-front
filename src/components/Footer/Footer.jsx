@@ -29,7 +29,7 @@ function Footer() {
             </div>
           </div>
           <div className="row pt-4 ">
-            <div className="d-flex justify-content-around">
+            <div className="d-flex justify-content-between">
               <div className="col-md-2">
                 <p className="text-white my-0">DECO-HACK</p>
                 <ul className="list-unstyled deco-list">

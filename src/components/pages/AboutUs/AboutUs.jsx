@@ -10,7 +10,7 @@ function AboutUs() {
         <div className="row d-flex justify-content-center align-items-center mx-0">
           <div className="col-md-4">
             <div>
-              <h1 className={`${aboutUsStyles.title} pt-5`}>
+              <h1 className={`${aboutUsStyles.title}`}>
                 - Sobre el proyecto -
               </h1>
               <p>
@@ -24,7 +24,7 @@ function AboutUs() {
           </div>
           <div className="col-md-8">
             <img
-              className={`${aboutUsStyles.imgStyle} pt-5 img-fluid`}
+              className={`${aboutUsStyles.imgStyle} pt-2 img-fluid`}
               src="../../img/photo-back.png"
               alt="img"
             />
@@ -32,17 +32,18 @@ function AboutUs() {
         </div>
         <hr />
         <div className="my-5">
-          <h2 className={`${aboutUsStyles.title} text-center`}>
-            Resumen del proyecto
-          </h2>
+          <h2 className={`${aboutUsStyles.title} text-center`}>Resumen</h2>
           <p>
             En este ejercicio se debia construir un sitio de e-commerce,
-            dedicado a la venta de cualquier producto elegido por el equipo. Se
-            dividieron las tareas, tratando de que cada integrante realizara
-            aproximadamente la misma cantidad de trabajo e intentando que las
-            mismas sean variadas. Se decidió apoyarse en las herramientas como
-            Trello y Exallidraw, donde se pueden crear una listas de tareas,
-            tener due dates y responsables de las mismas.
+            dedicado a la venta de cualquier producto. Se dividieron las tareas,
+            tratando de que cada integrante realizara aproximadamente la misma
+            cantidad de trabajo e intentando que las mismas sean variadas.
+          </p>
+          <p>
+            {" "}
+            Se decidió apoyarse en las herramientas como Trello y Exallidraw,
+            donde se pueden crear una listas de tareas, tener due dates y
+            responsables de las mismas.
           </p>
           <p className="">
             Se enfatizó en trabajo en equipo, cuidando mucho la comunicación

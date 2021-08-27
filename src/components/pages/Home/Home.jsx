@@ -45,7 +45,7 @@ function Home() {
                     alt={category.name}
                   />
 
-                  <h3 className="pt-2">{category.name}</h3>
+                  <h3 className="pt-2 text-center">{category.name}</h3>
                 </div>
               </Link>
             </div>
