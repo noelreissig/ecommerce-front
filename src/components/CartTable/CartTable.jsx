@@ -19,8 +19,8 @@ export const CartTable = () => {
         <Table hover>
           <thead>
             <tr className="text-start">
-              <th>Producto</th>
-              <th></th>
+              <th className="">Producto</th>
+              <th className="d-none d-md-table-cell">Img</th>
               <th>Precio</th>
               <th className="text-start">Cant.</th>
               <th>Sub-total</th>
@@ -32,7 +32,7 @@ export const CartTable = () => {
               return (
                 <tr className="text-start">
                   <td className="text-start align-middle">{item.prod.name}</td>
-                  <td className="text-start align-middle d-none d-md-block">
+                  <td className="text-start align-middle d-none d-md-table-cell">
                     <img
                       className={`img-fluid`}
                       src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${item.prod.picture_url}`}

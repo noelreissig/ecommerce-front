@@ -61,6 +61,7 @@ function OneProduct() {
                 <p className="fw-light">
                   Disponibilidad:
                   <span className="text-success fw-bold fw-light">
+                    {" "}
                     En Stock {product.stock}
                   </span>
                 </p>

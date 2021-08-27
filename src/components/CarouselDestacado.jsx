@@ -10,35 +10,35 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/complementos/2A_lampara.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/2A_lampara.webp`}
                 alt="Lampara"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/complementos/3B_almohadon.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_almohadon.webp`}
                 alt="Almohadon"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="./img/living/8B_mesa.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/8B_mesa.webp`}
                 alt="Mesa"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/dormitorio/3b_mesaLuz.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_mesaLuz.webp`}
                 alt="Mesa Luz"
               />
             </div>
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/living/5B_butaca.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/5B_butaca.webp`}
                 alt="Butaca"
               />
             </div>
@@ -46,7 +46,7 @@ const CarouselDestacado = () => {
             <div className="col-2">
               <img
                 className="d-block w-100"
-                src="../img/dormitorio/7A_comoda.webp"
+                src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/7A_comoda.webp`}
                 alt="Comoda"
               />
             </div>
