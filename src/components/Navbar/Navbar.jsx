@@ -1,12 +1,15 @@
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, Container, NavDropdown, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import React from "react";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import axios from "axios";
 import CartIcon from "../CartIcon/CartIcon";
+import { useSelector, useDispatch } from "react-redux";
 
 function NavComponent() {
+	const user = useSelector((state) => state.authReducer);
+	const dispatch = useDispatch();
 	const [login, setLogin] = useState(true);
 	const [register, setRegister] = useState(false);
 	const [categories, setCategories] = useState([]);
@@ -20,6 +23,8 @@ function NavComponent() {
 		};
 		getCategories();
 	}, []);
+
+	const handleLogout = () => dispatch({ type: "LOGOUT_REQUEST" });
 
 	return (
 		<div style={{ paddingBottom: "10px" }}>
@@ -51,18 +56,33 @@ function NavComponent() {
 						</Nav.Link>
 
 						<Nav href="/login" className="block">
-							{login ? (
-								<Login
-									placement={"end"}
-									setLogin={setLogin}
-									startShow={register}
-								/>
+							{!user.token ? (
+								login ? (
+									<Login
+										placement={"end"}
+										setLogin={setLogin}
+										startShow={register}
+									/>
+								) : (
+									<Register
+										placement={"end"}
+										setLogin={setLogin}
+										setRegister={setRegister}
+									/>
+								)
 							) : (
-								<Register
-									placement={"end"}
-									setLogin={setLogin}
-									setRegister={setRegister}
-								/>
+								<div>
+									<span className="text-secondary">
+										Hola {user.firstname}
+									</span>
+									<Button
+										variant="outline-secondary"
+										className="ms-2"
+										onClick={() => handleLogout()}
+									>
+										Logout
+									</Button>
+								</div>
 							)}
 						</Nav>
 					</Nav>

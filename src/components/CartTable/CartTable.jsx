@@ -1,8 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import cartStyles from "./cartTable.module.css";
-import { useDispatch } from "react-redux";
 
 export const CartTable = () => {
 	const dispatch = useDispatch();
@@ -66,7 +65,7 @@ export const CartTable = () => {
 					</Table>
 					<button
 						onClick={() => emptyCart()}
-						className="btn btn-secondary fs-10"
+						className="btn btn-outline-secondary rounded-pill px-4 mt-5  fs-10"
 					>
 						Vaciar Carrito
 					</button>

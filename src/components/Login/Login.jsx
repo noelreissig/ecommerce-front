@@ -24,15 +24,16 @@ function Login({ setLogin, startShow = true, ...props }) {
 			url: "http://localhost:3001/api/tokenuser",
 			data: { email, password },
 		}).then((response) => {
-			dispatch({ type: "LOGIN_REQUEST", payload: response.data.token });
-			history.push("/admin");
+			dispatch({ type: "LOGIN_REQUEST", payload: response.data });
+			// history.push("/admin");
+			handleClose();
 		});
 	};
 
 	return (
 		<div>
 			<>
-				<Button variant="" onClick={toggleShow} className="me-2  text-white">
+				<Button variant="outline-secondary" onClick={toggleShow} className="me-2">
 					Login
 				</Button>
 				<Offcanvas show={show} onHide={handleClose} {...props}>

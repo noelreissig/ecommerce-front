@@ -1,9 +1,7 @@
 function authReducer(state = { token: "" }, action) {
 	switch (action.type) {
 		case "LOGIN_REQUEST":
-			return {
-				token: action.payload,
-			};
+			return action.payload;
 
 		case "LOGOUT_REQUEST":
 			return {
