@@ -27,7 +27,7 @@ function NavComponent() {
 	const handleLogout = () => dispatch({ type: "LOGOUT_REQUEST" });
 
 	return (
-		<div style={{ paddingBottom: "10px" }}>
+		<div style={{ paddingBottom: "60px" }}>
 			<Navbar bg="black" variant="dark" fixed="top" expand="md">
 				<Container>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />

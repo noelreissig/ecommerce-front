@@ -1,0 +1,12 @@
+.imgStyle {
+  width: 200rem;
+}
+.title {
+  color: rgba(202, 117, 38, 0.514);
+}
+.imgProfile {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
