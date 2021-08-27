@@ -84,30 +84,47 @@ function AboutUs() {
           <h3 className={`${aboutUsStyles.title} text-center`}>Equipo</h3>
           <div className="row">
             <div className="d-flex justify-content-around">
-              <div className="col-md-3">
+              <div className="col-md-3 text-center">
                 <img
                   className={`${aboutUsStyles.imgProfile} img-fluid`}
                   src="../../img/aboutUs/Maria_Noel.png"
                   alt="María Noel_2"
                 />
-                <div className="text-center">
+                <div className="text-center ">
                   <strong>Maria Noel Reissig</strong>
-                  <i class="fab fa-linkedin"> Maria Noel</i>
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"> Maria Noel</i>
+                  </p>
                 </div>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 text-center">
                 <img
                   className={`${aboutUsStyles.imgProfile} img-fluid`}
                   src="../../img/aboutUs/Gabriel.png"
                   alt="Gabriel"
                 />
+                <div className="text-center ">
+                  <strong>Gabriel Vicente</strong>
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"> Gabriel Vicente</i>
+                  </p>
+                </div>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-3 text-center">
                 <img
                   className={`${aboutUsStyles.imgProfile} img-fluid`}
                   src="../../img/aboutUs/Antonella_2.jpg"
                   alt="Antonella"
                 />
+                <div className="text-center ">
+                  <strong>Antonella Gervasini</strong>
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"> Antonella Gervasini</i>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
