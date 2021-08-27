@@ -29,8 +29,8 @@ footer a:hover {
     flex-direction: column;
     text-align: center;
   }
+}
 
-  /* .decoList li {
-    text-align: left;
-  } */
+.sizeP {
+  font-size: 0.8rem;
 }
