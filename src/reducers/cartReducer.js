@@ -19,9 +19,7 @@ export default function cartReducer(shoppingCart = [], action) {
 			return shoppingCart.filter((item) => item.prod.id !== action.payload);
 		}
 		case "CLEAR_CART": {
-			return {
-				shoppingCart: [],
-			};
+			return (shoppingCart = []);
 		}
 
 		default:

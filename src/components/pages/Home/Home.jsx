@@ -33,7 +33,7 @@ function Home() {
         </h2>
         <div className="row g-0 d-flex justify-content-center pb-4">
           {categories.map((category) => (
-            <div className="col-sm-3 mx-3 pb-3" key={category.id}>
+            <div className=" col-sm-3 mx-3 pb-3" key={category.id}>
               <Link
                 to={`${category.name}`}
                 className={homeStyles.linkDecoration}
