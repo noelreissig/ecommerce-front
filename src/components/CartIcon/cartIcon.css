@@ -1,10 +1,5 @@
-.MuiIconButton-root {
-	flex: 0 0 auto;
-	color: rgba(0, 0, 0, 0.54);
-	/* padding: 12px; */
-	overflow: visible;
+#cart-icon {
+	padding: 0px;
+	margin-inline: 2px;
 	font-size: 1.1rem;
-	text-align: start;
-	transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-	border-radius: 50%;
 }

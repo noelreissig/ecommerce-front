@@ -21,7 +21,7 @@ const Cart = () => {
 					<div className="col-md-4 border m-0 p-3 h-50">
 						<h5>Tu Pedido</h5>
 						<hr />
-						<div className="d-flex justify-content-between pb-3">
+						<div className="d-flex justify-content-between pb-3 fs-6">
 							<span>Subtotal Productos</span>
 							<span>
 								<strong>
@@ -37,14 +37,12 @@ const Cart = () => {
 								</strong>
 							</span>
 						</div>
-						<div className="d-flex justify-content-between">
-							<span>Costo de envio</span>
-							<span>
-								<strong>sin costo</strong>
-							</span>
+						<div className="d-flex justify-content-between text-secondary fs-6">
+							<span>Costo de envío</span>
+							<span>sin costo</span>
 						</div>
 						<hr />
-						<div className="d-flex justify-content-between">
+						<div className="d-flex justify-content-between text-success fs-4">
 							<span>Total</span>
 							<span>
 								<strong>
@@ -61,9 +59,9 @@ const Cart = () => {
 							</span>
 						</div>
 						<hr />
-						<div className="">
-							<h5>Formas de pago</h5>
-							<div className="p-5 d-flex justify-content-between">
+						<div className="fs-6">
+							<h6>Formas de pago</h6>
+							<div className=" d-flex justify-content-around">
 								<span>
 									<i className="fab fa-paypal"></i>
 								</span>

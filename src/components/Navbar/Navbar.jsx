@@ -50,12 +50,11 @@ function NavComponent() {
 						</Nav>
 					</Navbar.Collapse>
 
-					<Nav className="d-flex flex-row justify-content-end">
-						<Nav.Link href="/carrito" className="me-3">
+					<Nav className="d-flex flex-row justify-content-end ">
+						<Nav.Link href="/carrito" className="me-4 pb-0 pt-1">
 							<CartIcon />
 						</Nav.Link>
-
-						<Nav href="/login" className="block">
+						<Nav href="/login" className="block ">
 							{!user.token ? (
 								login ? (
 									<Login
@@ -72,12 +71,13 @@ function NavComponent() {
 								)
 							) : (
 								<div>
-									<span className="text-secondary">
+									<span className="text-light align-text-top me-2">
 										Hola {user.firstname}
 									</span>
 									<Button
-										variant="outline-secondary"
-										className="ms-2"
+										variant="outline-secondary "
+										className="ms-2 "
+										size="sm"
 										onClick={() => handleLogout()}
 									>
 										Logout
