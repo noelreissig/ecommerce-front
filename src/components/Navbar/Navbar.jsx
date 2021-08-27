@@ -71,7 +71,7 @@ function NavComponent() {
 								)
 							) : (
 								<div>
-									<span className="text-light align-text-top me-2">
+									<span className="text-light align-text-top me-2 d-none d-md-inline">
 										Hola {user.firstname}
 									</span>
 									<Button

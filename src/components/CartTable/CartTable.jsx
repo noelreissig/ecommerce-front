@@ -71,7 +71,7 @@ export const CartTable = () => {
 					</button>
 				</div>
 			) : (
-				<h4>No tienes productos en el Carrito</h4>
+				<h4 className="p-3 text-secondary">No tienes productos en el Carrito</h4>
 			)}
 		</div>
 	);
