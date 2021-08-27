@@ -81,12 +81,14 @@ function AboutUs() {
         </div>
         <hr />
         <div>
-          <h3 className={`${aboutUsStyles.title} text-center`}>Equipo</h3>
+          <h3 className={`${aboutUsStyles.title} text-center mb-4`}>
+            Equipo de Trabajo
+          </h3>
           <div className="row">
             <div className="d-flex justify-content-around">
               <div className="col-md-3 text-center">
                 <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid`}
+                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3 `}
                   src="../../img/aboutUs/Maria_Noel.png"
                   alt="María Noel_2"
                 />
@@ -100,7 +102,7 @@ function AboutUs() {
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid`}
+                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
                   src="../../img/aboutUs/Gabriel.png"
                   alt="Gabriel"
                 />
@@ -114,7 +116,7 @@ function AboutUs() {
               </div>
               <div className="col-md-3 text-center">
                 <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid`}
+                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
                   src="../../img/aboutUs/Antonella_2.jpg"
                   alt="Antonella"
                 />
@@ -129,8 +131,9 @@ function AboutUs() {
             </div>
           </div>
         </div>
+        <hr className="my-5" />
 
-        <div className="border shadow p-4 m-4 rounded">
+        <div className="border shadow p-4 my-5 rounded">
           <h3 className={`${aboutUsStyles.title} text-center`}>
             Para poder acceder a las funcionalidades del Administrador:{" "}
           </h3>
