@@ -19,7 +19,7 @@ function OneProduct() {
 	useEffect(() => {
 		const getProduct = async () => {
 			const response = await axios.get(
-				`${process.env.REACT_APP_API_URL}/product/${slug}`
+				`${process.env.REACT_APP_API_URL}/api/product/${slug}`
 			);
 			setProduct(response.data);
 		};
