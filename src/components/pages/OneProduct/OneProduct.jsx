@@ -8,32 +8,37 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import ToastProducto from "../../ToastProducto/ToastProducto";
 
 function OneProduct() {
 	const { slug } = useParams();
 	const [product, setProduct] = useState([]);
 	const dispatch = useDispatch();
 	const [quantity, setQuantity] = useState(1);
+	const [show, setShow] = useState(false);
 	useEffect(() => {
 		const getProduct = async () => {
 			const response = await axios.get(
-				` http://localhost:3001/api/product/${slug}`
+				`${process.env.REACT_APP_API_URL}/product/${slug}`
 			);
 			setProduct(response.data);
 		};
 		getProduct();
 	}, []);
-	console.log(product);
-	const handleBuy = () =>
+
+	const handleBuy = () => {
 		dispatch({
 			type: "ADD_ITEM",
 			payload: { item: product, quantity: quantity },
 		});
-	console.log({ payload: { item: product, quantity: quantity } });
+		setShow(true);
+	};
+
 	return (
 		<div>
 			<NavComponent />
 			<div className="container pb-5">
+				<ToastProducto show={show} setShow={setShow} />
 				<div className="row gx-0 mt-4">
 					<div className="col-md-6 mt-5">
 						<CarouselOneProduct product={product} />

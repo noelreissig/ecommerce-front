@@ -7,10 +7,10 @@ import loginStyles from "./login.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function Login({ setLogin, startShow = true, ...props }) {
+function Login({ setLogin, show, setShow, startShow = true, ...props }) {
 	const history = useHistory();
 	const dispatch = useDispatch();
-	const [show, setShow] = useState(startShow);
+	// const [show, setShow] = useState(startShow);
 	const handleClose = () => setShow(false);
 	const toggleShow = () => setShow((s) => !s);
 
@@ -21,11 +21,10 @@ function Login({ setLogin, startShow = true, ...props }) {
 		e.preventDefault();
 		axios({
 			method: "post",
-			url: "http://localhost:3001/api/tokenuser",
+			url: `${process.env.REACT_APP_API_URL}/api/tokenuser`,
 			data: { email, password },
 		}).then((response) => {
 			dispatch({ type: "LOGIN_REQUEST", payload: response.data });
-			// history.push("/admin");
 			handleClose();
 		});
 	};
@@ -33,9 +32,6 @@ function Login({ setLogin, startShow = true, ...props }) {
 	return (
 		<div>
 			<>
-				<Button variant="outline-secondary" onClick={toggleShow} className="me-2">
-					Login
-				</Button>
 				<Offcanvas show={show} onHide={handleClose} {...props}>
 					<Offcanvas.Header closeButton className={loginStyles.btnClose}>
 						<Offcanvas.Title>
@@ -94,7 +90,7 @@ function Login({ setLogin, startShow = true, ...props }) {
 										<Link
 											className="ms-2"
 											onClick={() => {
-												toggleShow();
+												// toggleShow();
 												setLogin((prev) => !prev);
 											}}
 										>

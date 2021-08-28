@@ -1,13 +1,31 @@
 import React from "react";
 import Footer from "../../Footer/Footer";
-// import { Navbar } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import CartTable from "../../CartTable/CartTable";
 import NavComponent from "../../Navbar/Navbar";
 import cartStyles from "./cart.module.css";
+import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import Login from "../../Login/Login";
+import Register from "../../Register/Register";
 
 const Cart = () => {
+	const history = useHistory();
 	const shoppingCart = useSelector((state) => state.cartReducer);
+	const user = useSelector((state) => state.authReducer);
+	const [login, setLogin] = useState(true);
+	const [register, setRegister] = useState(false);
+	const [show, setShow] = useState(false);
+	const toggleShow = () => setShow((s) => !s);
+
+	function handleBuy() {
+		if (user.token) {
+			history.push("/comprar");
+		} else {
+			toggleShow();
+		}
+	}
 
 	return (
 		<>
@@ -18,7 +36,7 @@ const Cart = () => {
 					<div className="col-md-8 ps-0 ">
 						<CartTable />
 					</div>
-					<div className="col-md-4 border m-0 p-3 h-50">
+					<div className="col-md-4 border rounded m-0 p-3 h-50 shadow">
 						<h5>Tu Pedido</h5>
 						<hr />
 						<div className="d-flex justify-content-between pb-3 fs-6">
@@ -77,9 +95,30 @@ const Cart = () => {
 							</div>
 						</div>
 						<div className="d-flex justify-content-between"></div>
-						<button className="btn btn-outline-dark rounded-pill px-4 mt-5 w-100">
+						<button
+							onClick={() => handleBuy()}
+							className="btn btn-outline-dark rounded-pill px-4 mt-5 w-100"
+						>
 							Confirmar Compra
 						</button>
+
+						{login ? (
+							<Login
+								placement={"end"}
+								setLogin={setLogin}
+								startShow={register}
+								show={show}
+								setShow={setShow}
+							/>
+						) : (
+							<Register
+								placement={"end"}
+								setLogin={setLogin}
+								setRegister={setRegister}
+								show={show}
+								setShow={setShow}
+							/>
+						)}
 					</div>
 				</div>
 				<div className="row d-flex text-center mt-5">
