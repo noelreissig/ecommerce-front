@@ -10,52 +10,54 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Home() {
-	const [categories, setCategories] = useState([]);
-	useEffect(() => {
-		const getCategories = async () => {
-			const response = await axios({
-				method: "get",
-				url: `${process.env.REACT_APP_API_URL}/api/category`,
-			});
-			setCategories(response.data);
-		};
-		getCategories();
-	}, []);
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    const getCategories = async () => {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}/api/category`,
+      });
+      setCategories(response.data);
+    };
+    getCategories();
+  }, []);
 
-	// console.log(categories);
-	return (
-		<div>
-			<NavComponent />
-			<Hero />
-			<div className="container">
-				<h2 className="py-5 text-center">¡Te ayudamos a transformar tu hogar!</h2>
-				<div className="row g-0 d-flex justify-content-center pb-4">
-					{categories.map((category) => (
-						<div className=" col-sm-3 mx-3 pb-3" key={category.id}>
-							<Link
-								to={`${category.name}`}
-								className={homeStyles.linkDecoration}
-							>
-								<div className={homeStyles.cardCategory}>
-									<img
-										className={`img-fluid rounded shadow`}
-										src={`${process.env.REACT_APP_SUPABASE_URL_CAT}/${category.photo_url}`}
-										alt={category.name}
-									/>
+  console.log(categories);
+  return (
+    <div>
+      <NavComponent />
+      <Hero />
+      <div className="container">
+        <h2 className="py-5 text-center">
+          ¡Te ayudamos a transformar tu hogar!
+        </h2>
+        <div className="row g-0 d-flex justify-content-center pb-4">
+          {categories.map((category) => (
+            <div className=" col-sm-3 mx-3 pb-3" key={category.id}>
+              <Link
+                to={`${category.name}`}
+                className={homeStyles.linkDecoration}
+              >
+                <div className={homeStyles.cardCategory}>
+                  <img
+                    className={`img-fluid rounded shadow`}
+                    src={`${process.env.REACT_APP_SUPABASE_URL_CAT}/${category.photo_url}`}
+                    alt={category.name}
+                  />
 
-									<h3 className="pt-2 text-center">{category.name}</h3>
-								</div>
-							</Link>
-						</div>
-					))}
-				</div>
-			</div>
-			<div className="container">
-				<CarouselDestacado />
-			</div>
-			<Footer />
-		</div>
-	);
+                  <h3 className="pt-2 text-center">{category.name}</h3>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="container">
+        <CarouselDestacado />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;

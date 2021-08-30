@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 const CarouselDestacado = () => {
   return (
-    <div className="p-5 text-dark h-25 d-none d-lg-block">
+    <div className="pb-5 text-dark h-25 d-none d-lg-block">
       <h4>Productos destacados</h4>
       <Carousel className="w-100">
         <Carousel.Item>
