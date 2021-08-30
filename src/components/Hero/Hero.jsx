@@ -8,14 +8,10 @@ function Hero() {
         <div className={`${heroStyles.hero} container`}>
           <h1>Deco-Hack</h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
-            unde debitis, exercitationem inventore nemo praesentium. Corporis
-            asperiores.
+            Trabajamos para revolucionar el sector del mueble, el diseño y la
+            decoración. Apostamos por darle una vuelta y ser la opción para
+            inconformistas como tú, que buscan algo más.
           </p>
-          {/* <button className="btn btn-light rounded-pill ">
-            <span className="px-2"> Ver destacados </span>
-            <i className="fas fa-arrow-right  pe-2"></i>
-          </button> */}
         </div>
       </div>
     </div>

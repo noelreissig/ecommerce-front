@@ -16,7 +16,7 @@ function Footer() {
                   más.
                 </h5>
                 <p className={`${footerStyles.sizeP} my-0`}>
-                  Suscribite a nuetra página y obtené un 10% de descuento en tu
+                  Suscribite a nuestra página y obtené un 10% de descuento en tu
                   primera compra.
                 </p>
               </div>
