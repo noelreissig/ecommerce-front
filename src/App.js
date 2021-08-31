@@ -8,6 +8,7 @@ import Category from "./components/pages/Category/Category";
 import OneProduct from "./components/pages/OneProduct/OneProduct";
 import Cart from "./components/pages/Cart/Cart";
 import Buy from "./components/pages/Buy/Buy";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
 	return (
@@ -19,7 +20,7 @@ function App() {
 					<Route path="/sobre-nosotros" component={AboutUs} />
 					{/* <Route path="/comedor" component={Categories} /> */}
 					<Route path="/carrito" component={Cart} />
-					<Route path="/comprar" component={Buy} />
+					<PrivateRoute path="/comprar" component={Buy} />
 					<Route path="/producto/:slug" component={OneProduct} />
 					<Route path="/:categories" component={Category} />
 					{/* <Route path="/producto/:productName" component={OneProduct} /> */}
