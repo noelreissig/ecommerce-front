@@ -97,7 +97,7 @@ function AboutUs() {
                   <strong>Maria Noel Reissig</strong>
                   <p>
                     {" "}
-                    <i class="fab fa-linkedin"> Maria Noel</i>
+                    <i class="fab fa-linkedin"> Maria Noel Reissig</i>
                   </p>
                 </div>
               </div>

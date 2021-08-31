@@ -4,3 +4,8 @@
 /* body {
   font-family: "STIX Two Text", serif;
 } */
+
+#root {
+  position: relative;
+  min-height: calc(100vh - 100px);
+}
