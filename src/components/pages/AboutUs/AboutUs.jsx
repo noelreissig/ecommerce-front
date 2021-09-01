@@ -1,3 +1,4 @@
+import ReactPlayer from "react-player";
 import Footer from "../../Footer/Footer";
 import NavComponent from "../../Navbar/Navbar";
 import aboutUsStyles from "./aboutUs.module.css";
@@ -13,7 +14,7 @@ function AboutUs() {
               <h1 className={`${aboutUsStyles.title}`}>
                 - Sobre el proyecto -
               </h1>
-              <p>
+              <p className="fs-5">
                 Este proyecto esta enmarcado en el curso Cooding Bootcamp de
                 Hack Academy. El cuál es un curso de 3 meses, extremadamente
                 práctico y de dedicación full-time. Durante este curso se
@@ -31,9 +32,9 @@ function AboutUs() {
           </div>
         </div>
         <hr />
-        <div className="my-5">
-          <h2 className={`${aboutUsStyles.title} text-center`}>Resumen</h2>
-          <p>
+        <div className="my-5 text-center fs-5">
+          <h2 className={`${aboutUsStyles.title} text-center pt-5`}>Resumen</h2>
+          <p className="mt-4">
             En este ejercicio se debia construir un sitio de e-commerce,
             dedicado a la venta de cualquier producto. Se dividieron las tareas,
             tratando de que cada integrante realizara aproximadamente la misma
@@ -54,7 +55,7 @@ function AboutUs() {
           </p>
         </div>
         <div className="my-5">
-          <h2 className={`${aboutUsStyles.title} text-center`}>
+          <h2 className={`${aboutUsStyles.title} text-center pt-5 mb-4`}>
             Tecnologías utilizadas
           </h2>
           <div className="row">
@@ -68,7 +69,7 @@ function AboutUs() {
                   <li>Boostrap</li>
                 </ul>
               </div>
-              <div className="col-md-4 text-center">
+              <div className="col-md-4 text-center mb-5 pb-5">
                 <h3>Back-End</h3>
                 <ul className="list-unstyled">
                   <li>Node.js</li>
@@ -81,53 +82,101 @@ function AboutUs() {
           </div>
         </div>
         <hr />
+        <div className="my-5 py-3">
+          <div className="row ">
+            <div className="col-md-4 ">
+              <h3 className="mt-5 pt-3">
+                Algunas de las funcionalidades que se pueden realizar siendo
+                administrador de la App.{" "}
+              </h3>
+              <span> Consulte, edite y administre </span> sus bases de datos
+              fácilmente con una aplicación que puede ejecutarse rápidamente.
+            </div>
+            <div className="col-md-8">
+              <div style={{ width: "90%" }}>
+                <ReactPlayer
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  width="90%"
+                  playing
+                  muted
+                  loop
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row my-5">
+            <div className="col-md-8">
+              <div style={{ width: "90%" }}>
+                <ReactPlayer
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  width="90%"
+                  playing
+                  muted
+                  loop
+                />
+              </div>
+            </div>
+            <div className="col-md-4 ">
+              <h3 className="mt-5 pt-3">
+                Y vea reflejado los cambios instantáneamente desde el lado del
+                usuario.
+              </h3>
+              <p>
+                <span>
+                  Lo cuál mejora la experiencia, y no permite que el mismo se
+                  pierda de ninguna actualización!
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr />
         <div>
           <h3 className={`${aboutUsStyles.title} text-center mb-4`}>
             Equipo de Trabajo
           </h3>
-          <div className="row">
-            <div className="d-flex justify-content-around">
-              <div className="col-md-3 text-center">
-                <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3 `}
-                  src="../../img/aboutUs/Maria_Noel.png"
-                  alt="María Noel_2"
-                />
-                <div className="text-center ">
-                  <strong>Maria Noel Reissig</strong>
-                  <p>
-                    {" "}
-                    <i class="fab fa-linkedin"> Maria Noel Reissig</i>
-                  </p>
-                </div>
+          <div className="row d-flex justify-content-around">
+            <div className="col-md-3 text-center">
+              <img
+                className={`${aboutUsStyles.imgProfile} img-fluid mb-3 `}
+                src="../../img/aboutUs/Maria_Noel.png"
+                alt="María Noel_2"
+              />
+              <div className="text-center ">
+                <strong>Maria Noel Reissig</strong>
+                <p>
+                  {" "}
+                  <i class="fab fa-linkedin"> Maria Noel Reissig</i>
+                </p>
               </div>
-              <div className="col-md-3 text-center">
-                <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
-                  src="../../img/aboutUs/Gabriel.png"
-                  alt="Gabriel"
-                />
-                <div className="text-center ">
-                  <strong>Gabriel Vicente</strong>
-                  <p>
-                    {" "}
-                    <i class="fab fa-linkedin"> Gabriel Vicente</i>
-                  </p>
-                </div>
+            </div>
+            <div className="col-md-3 text-center">
+              <img
+                className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
+                src="../../img/aboutUs/Gabriel.png"
+                alt="Gabriel"
+              />
+              <div className="text-center ">
+                <strong>Gabriel Vicente</strong>
+                <p>
+                  {" "}
+                  <i class="fab fa-linkedin"> Gabriel Vicente</i>
+                </p>
               </div>
-              <div className="col-md-3 text-center">
-                <img
-                  className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
-                  src="../../img/aboutUs/Antonella_2.jpg"
-                  alt="Antonella"
-                />
-                <div className="text-center ">
-                  <strong>Antonella Gervasini</strong>
-                  <p>
-                    {" "}
-                    <i class="fab fa-linkedin"> Antonella Gervasini</i>
-                  </p>
-                </div>
+            </div>
+            <div className="col-md-3 text-center">
+              <img
+                className={`${aboutUsStyles.imgProfile} img-fluid mb-3`}
+                src="../../img/aboutUs/Antonella_2.jpg"
+                alt="Antonella"
+              />
+              <div className="text-center ">
+                <strong>Antonella Gervasini</strong>
+                <p>
+                  {" "}
+                  <i class="fab fa-linkedin"> Antonella Gervasini</i>
+                </p>
               </div>
             </div>
           </div>
