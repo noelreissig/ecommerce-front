@@ -47,12 +47,12 @@ const Buy = () => {
   const [show, setShow] = useState(false);
   const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    const getProduct = async () => {
-      await axios.get(`${process.env.REACT_APP_API_URL}/api/order/`);
-    };
-    getProduct();
-  }, []);
+  // useEffect(() => {
+  //   const getProduct = async () => {
+  //     await axios.get(`${process.env.REACT_APP_API_URL}/api/order/`);
+  //   };
+  //   getProduct();
+  // }, []);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -68,7 +68,7 @@ const Buy = () => {
     ev.preventDefault();
     axios({
       method: "patch",
-      url: `http://localhost:3001/api/users`,
+      url: `${process.env.REACT_APP_API_URL}/api/users`,
       data: {
         firstname: firstname,
         lastname: lastname,
@@ -210,11 +210,12 @@ const Buy = () => {
                 </h5>
               ) : (
                 <>
-                  {orders.map((order) => (
-                    <div className="col-md-6 my-2" key={order.id}>
-                      <CardOrders order={order} />
-                    </div>
-                  ))}{" "}
+                  {orders &&
+                    orders.map((order) => (
+                      <div className="col-md-6 my-2" key={order.id}>
+                        <CardOrders order={order} />
+                      </div>
+                    ))}{" "}
                 </>
               )}
             </div>
