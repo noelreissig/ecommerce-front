@@ -6,7 +6,7 @@ import NavComponent from "../../Navbar/Navbar";
 import cartStyles from "./cart.module.css";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import Login from "../../Login/Login";
 import Register from "../../Register/Register";
 
@@ -119,9 +119,11 @@ const Cart = () => {
         </div>
         <div className="row d-flex text-center mt-5 gs-0">
           <div className="col">
-            <button className="btn btn-outline-secondary rounded-pill px-4 mt-5 ">
-              Volver a Productos
-            </button>
+            <Link to="/#categories">
+              <button className="btn btn-outline-secondary rounded-pill px-4 mt-5 ">
+                Volver a Productos
+              </button>
+            </Link>
           </div>
         </div>
       </div>

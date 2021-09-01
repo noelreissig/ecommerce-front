@@ -6,6 +6,9 @@ import NavComponent from "../../Navbar/Navbar";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import ToastUpdate from "../../ToastUpdate/ToastUpdate";
+import CardOrders from "../../CardOrders/CardOrders";
+import Card from "react-bootstrap";
 
 const Buy = () => {
   const history = useHistory();
@@ -41,31 +44,51 @@ const Buy = () => {
   ];
 
   const [postalCod, setPostalCod] = useState("");
+  const [show, setShow] = useState(false);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const getProduct = async () => {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/users/${user.id}`
-      );
+      await axios.get(`${process.env.REACT_APP_API_URL}/api/order/`);
     };
     getProduct();
   }, []);
 
+  useEffect(() => {
+    const getOrders = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/order/${user.id}`
+      );
+      setOrders(response.data);
+    };
+    getOrders();
+  }, []);
+
   const handleUpdate = (ev) => {
     ev.preventDefault();
-    const formData = new FormData(ev.target);
     axios({
       method: "patch",
-      url: "http://localhost:3001/api/users/${user.id}",
-      data: formData,
+      url: `http://localhost:3001/api/users`,
+      data: {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        address: address,
+        city: city,
+        department: department,
+        postalcode: postalCod,
+        phone: phone,
+      },
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
-    history.push("/");
+    setShow(true);
   };
+
   return (
     <div>
+      <ToastUpdate show={show} setShow={setShow} />
       <NavComponent />
       <div className="container">
         <div className="row justify-content-center">
@@ -168,68 +191,77 @@ const Buy = () => {
                   </Form.Group>
                 </div>
               </div>
-              <hr className="my-5" />
-              <h3 className="mt-4 text-center">Mis favoritos</h3>
-              <div className="row mx-0 d-flex justify-content-center my-4">
-                <div className="col-md-2 mb-2 mx-2 text-center">
-                  <img
-                    className="d-block w-100 rounded"
-                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/2A_lampara.webp`}
-                    alt="Mesa"
-                  />
-                  <span>Lampara de pie</span>
-                </div>
-                <div className="col-md-2 mb-2 mx-2 text-center">
-                  <img
-                    className="d-block w-100 rounded"
-                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_almohadon.webp`}
-                    alt="Mesa"
-                  />
-                  <span>Almohadón Living</span>
-                </div>
-                <div className="col-md-2 mb-2 mx-2 text-center">
-                  <img
-                    className="d-block w-100 rounded"
-                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/1B_maceta.webp`}
-                    alt="Maceta"
-                  />
-                  <span>Maceta</span>
-                </div>{" "}
-                <div className="col-md-2 mb-2 mx-2 text-center">
-                  <img
-                    className="d-block w-100 rounded"
-                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/10A_espejo.webp`}
-                    alt="Espejo"
-                  />
-                  <span>Espejo Redondo</span>
-                </div>
-                <div className="col-md-2 mb-2 mx-2 text-center">
-                  <img
-                    className="d-block w-100 rounded"
-                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_butaca.webp`}
-                    alt="Butaca"
-                  />{" "}
-                  <span>Butaca</span>
-                </div>
-              </div>
-
-              <hr className="my-5" />
-              <h2 className="mt-4 text-center">Histórico de Órdenes</h2>
-              <div className="row mx-0 d-flex justify-content-between my-4">
-                <div className="col-md-3 bg-warning mb-2">orden3</div>
-                <div className="col-md-3 bg-warning mb-2">orden3</div>
-                <div className="col-md-3 bg-warning mb-2">orden3</div>
-              </div>
-
               <div className="d-flex justify-content-center">
                 <button
                   variant="primary"
                   className="my-4 btn btn-success align-item-center"
+                  type="submit"
                 >
                   Confirmar cambios
                 </button>
               </div>
             </Form>
+            <hr className="mb-5" />
+            <h2 className="mt-4 text-center">Histórico de Órdenes</h2>
+            <div className="row mx-0 d-flex justify-content-between my-4">
+              {orders.length === 0 ? (
+                <h5 className="text-center">
+                  No tienes órdenes registradas hasta el momento
+                </h5>
+              ) : (
+                <>
+                  {orders.map((order) => (
+                    <div className="col-md-6 my-2" key={order.id}>
+                      <CardOrders order={order} />
+                    </div>
+                  ))}{" "}
+                </>
+              )}
+            </div>
+            <hr className="my-5" />
+            <h3 className="mt-4 text-center">Mis favoritos</h3>
+            <div className="row mx-0 d-flex justify-content-center my-4">
+              <div className="col-md-2 mb-2 mx-2 text-center">
+                <img
+                  className="d-block w-100 rounded"
+                  src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/2A_lampara.webp`}
+                  alt="Mesa"
+                />
+                <span>Lampara de pie</span>
+              </div>
+              <div className="col-md-2 mb-2 mx-2 text-center">
+                <img
+                  className="d-block w-100 rounded"
+                  src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_almohadon.webp`}
+                  alt="Mesa"
+                />
+                <span>Almohadón Living</span>
+              </div>
+              <div className="col-md-2 mb-2 mx-2 text-center">
+                <img
+                  className="d-block w-100 rounded"
+                  src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/1B_maceta.webp`}
+                  alt="Maceta"
+                />
+                <span>Maceta</span>
+              </div>{" "}
+              <div className="col-md-2 mb-2 mx-2 text-center">
+                <img
+                  className="d-block w-100 rounded"
+                  src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/10A_espejo.webp`}
+                  alt="Espejo"
+                />
+                <span>Espejo Redondo</span>
+              </div>
+              <div className="col-md-2 mb-2 mx-2 text-center">
+                <img
+                  className="d-block w-100 rounded"
+                  src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_butaca.webp`}
+                  alt="Butaca"
+                />{" "}
+                <span>Butaca</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
