@@ -9,6 +9,7 @@ import BuyCompleted from "./components/pages/BuyCompleted/BuyCompleted";
 import OneProduct from "./components/pages/OneProduct/OneProduct";
 import Cart from "./components/pages/Cart/Cart";
 import Buy from "./components/pages/Buy/Buy";
+import MyAccount from "./components/pages/MyAccount/MyAccount";
 import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/sobre-nosotros" component={AboutUs} />
           <Route path="/carrito" component={Cart} />
           <PrivateRoute path="/comprar" component={Buy} />
+          <PrivateRoute path="/mis-datos" component={MyAccount} />
           <Route path="/gracias-por-su-compra" component={BuyCompleted} />
           <Route path="/producto/:slug" component={OneProduct} />
           <Route path="/:categories" component={Category} />
