@@ -148,9 +148,21 @@ const Buy = () => {
                   </Form.Group>
                 </div>
               </div>
+              <hr className="my-5" />
+              <h2 className="mt-4 text-center">Mis productos favoritos</h2>
+              <div className="row mx-0 d-flex justify-content-center my-4">
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+              </div>
 
               <hr className="my-5" />
-              <h2 className="mt-4 text-center">Órdenes</h2>
+              <h2 className="mt-4 text-center">Histórico de Órdenes</h2>
               <div className="row mx-0 d-flex justify-content-between my-4">
                 <div className="col-md-3 bg-warning mb-2">orden1</div>
                 <div className="col-md-3 bg-warning mb-2">orden2</div>
@@ -162,7 +174,7 @@ const Buy = () => {
                   variant="primary"
                   className="my-4 btn btn-success align-item-center"
                 >
-                  Confirmar
+                  Confirmar cambios
                 </button>
               </div>
             </Form>
