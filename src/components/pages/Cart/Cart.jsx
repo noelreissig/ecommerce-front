@@ -32,8 +32,8 @@ const Cart = () => {
       <NavComponent />
 
       <div className={`${cartStyles.stylesCart} container px-0`}>
-        <div className="row px-2 gs-0">
-          <div className="col-md-8 ps-0">
+        <div className="row px-0">
+          <div className="col-md-8 ps-0 ">
             <CartTable />
           </div>
           <div className="col-md-4 border rounded m-0 p-4 h-50 shadow">
@@ -117,13 +117,11 @@ const Cart = () => {
             )}
           </div>
         </div>
-        <div className="row d-flex text-center mt-5 gs-0">
+        <div className="row d-flex text-center mt-5">
           <div className="col">
-            <Link to="/#categories">
-              <button className="btn btn-outline-secondary rounded-pill px-4 mt-5 ">
-                Volver a Productos
-              </button>
-            </Link>
+            <button className="btn btn-outline-secondary rounded-pill px-4 mt-5 mx-2">
+              Volver a Productos
+            </button>
           </div>
         </div>
       </div>
