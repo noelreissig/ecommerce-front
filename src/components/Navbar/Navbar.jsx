@@ -6,6 +6,7 @@ import Register from "../Register/Register";
 import axios from "axios";
 import CartIcon from "../CartIcon/CartIcon";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function NavComponent() {
   const user = useSelector((state) => state.authReducer);
@@ -88,6 +89,11 @@ function NavComponent() {
                 <div>
                   <span className="text-light align-text-top me-2 d-none d-md-inline">
                     Hola {user.firstname}
+                  </span>
+                  <span className="text-light align-text-top me-2 d-none d-md-inline">
+                    <Link to="/mis-datos">
+                      <i class="fas fa-user text-white"></i>
+                    </Link>
                   </span>
                   <Button
                     variant="outline-secondary "

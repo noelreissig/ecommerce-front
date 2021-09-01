@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Form, Row, Col } from "react-bootstrap";
 import Footer from "../../Footer/Footer";
 import NavComponent from "../../Navbar/Navbar";
@@ -42,12 +42,21 @@ const Buy = () => {
 
   const [postalCod, setPostalCod] = useState("");
 
-  const handleBuy = (ev) => {
+  useEffect(() => {
+    const getProduct = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/users/${user.id}`
+      );
+    };
+    getProduct();
+  }, []);
+
+  const handleUpdate = (ev) => {
     ev.preventDefault();
     const formData = new FormData(ev.target);
     axios({
-      method: "post",
-      url: "http://localhost:3001/api/order",
+      method: "patch",
+      url: "http://localhost:3001/api/users/${user.id}",
       data: formData,
       headers: {
         Authorization: `Bearer ${token}`,
@@ -61,9 +70,9 @@ const Buy = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 shadow rounded my-5 p-4">
-            <h2 className="text-center">Perfil de Usuario</h2>
+            <h2 className="text-center">Mi Perfil</h2>
             <Form
-              onSubmit={(ev) => handleBuy(ev)}
+              onSubmit={(ev) => handleUpdate(ev)}
               className="mb-3 modalForm text-dark"
             >
               <Form.Group controlId="formGridFirstName">
@@ -72,6 +81,7 @@ const Buy = () => {
                   required
                   type="text"
                   placeholder="Nombre"
+                  name="firstname"
                   value={firstname}
                   onChange={(ev) => setFirstname(ev.target.value)}
                 />
@@ -81,6 +91,7 @@ const Buy = () => {
                 <Form.Control
                   required
                   type="text"
+                  name="lastname"
                   placeholder="Apellido"
                   value={lastname}
                   onChange={(ev) => setLastname(ev.target.value)}
@@ -89,6 +100,7 @@ const Buy = () => {
                 <Form.Control
                   required
                   type="text"
+                  name="email"
                   placeholder="email"
                   value={email}
                   onChange={(ev) => setEmail(ev.target.value)}
@@ -100,6 +112,7 @@ const Buy = () => {
                 <Form.Control
                   required
                   type="text"
+                  name="address"
                   value={address}
                   onChange={(ev) => setAddress(ev.target.value)}
                 />
@@ -108,6 +121,7 @@ const Buy = () => {
                   required
                   type="number"
                   value={phone}
+                  name="phone"
                   onChange={(ev) => setPhone(ev.target.value)}
                 />
               </Form.Group>
@@ -116,6 +130,7 @@ const Buy = () => {
                 <Form.Control
                   required
                   type="text"
+                  name="city"
                   value={city}
                   onChange={(ev) => setCity(ev.target.value)}
                   placeholder="Ingresar..."
@@ -125,10 +140,14 @@ const Buy = () => {
                 <div className="col-md-6">
                   <Form.Group controlId="formGridState">
                     <Form.Label className="mb-2 mt-3">Departamento</Form.Label>
-                    <Form.Select className="me-auto" defaultValue="Choose...">
+                    <Form.Select
+                      className="me-auto"
+                      defaultValue="Choose..."
+                      name="department"
+                    >
                       <option>Elegir...</option>
                       {departamentos.map((item) => (
-                        <option>{item}</option>
+                        <option key={item}>{item}</option>
                       ))}
                     </Form.Select>
                   </Form.Group>
@@ -141,6 +160,7 @@ const Buy = () => {
                       className="me-auto"
                       required
                       type="text"
+                      name="postalcode"
                       value={postalCod}
                       onChange={(ev) => setPostalCod(ev.target.value)}
                       placeholder="Ingrese código postal"
@@ -149,23 +169,55 @@ const Buy = () => {
                 </div>
               </div>
               <hr className="my-5" />
-              <h2 className="mt-4 text-center">Mis productos favoritos</h2>
+              <h3 className="mt-4 text-center">Mis favoritos</h3>
               <div className="row mx-0 d-flex justify-content-center my-4">
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
-                <div className="col-md-2 bg-warning mb-2 mx-2">fav1</div>
+                <div className="col-md-2 mb-2 mx-2 text-center">
+                  <img
+                    className="d-block w-100 rounded"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/2A_lampara.webp`}
+                    alt="Mesa"
+                  />
+                  <span>Lampara de pie</span>
+                </div>
+                <div className="col-md-2 mb-2 mx-2 text-center">
+                  <img
+                    className="d-block w-100 rounded"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_almohadon.webp`}
+                    alt="Mesa"
+                  />
+                  <span>Almohadón Living</span>
+                </div>
+                <div className="col-md-2 mb-2 mx-2 text-center">
+                  <img
+                    className="d-block w-100 rounded"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/1B_maceta.webp`}
+                    alt="Maceta"
+                  />
+                  <span>Maceta</span>
+                </div>{" "}
+                <div className="col-md-2 mb-2 mx-2 text-center">
+                  <img
+                    className="d-block w-100 rounded"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/10A_espejo.webp`}
+                    alt="Espejo"
+                  />
+                  <span>Espejo Redondo</span>
+                </div>
+                <div className="col-md-2 mb-2 mx-2 text-center">
+                  <img
+                    className="d-block w-100 rounded"
+                    src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/3B_butaca.webp`}
+                    alt="Butaca"
+                  />{" "}
+                  <span>Butaca</span>
+                </div>
               </div>
 
               <hr className="my-5" />
               <h2 className="mt-4 text-center">Histórico de Órdenes</h2>
               <div className="row mx-0 d-flex justify-content-between my-4">
-                <div className="col-md-3 bg-warning mb-2">orden1</div>
-                <div className="col-md-3 bg-warning mb-2">orden2</div>
+                <div className="col-md-3 bg-warning mb-2">orden3</div>
+                <div className="col-md-3 bg-warning mb-2">orden3</div>
                 <div className="col-md-3 bg-warning mb-2">orden3</div>
               </div>
 
