@@ -14,7 +14,13 @@ export default function cartReducer(shoppingCart = [], action) {
 				return [...shoppingCart];
 			}
 		}
-
+		case "UPDATE_QUANTITY": {
+			const itemFound = shoppingCart.findIndex(
+				(item) => item.prod.id === action.payload.id
+			);
+			shoppingCart[itemFound].quantity = action.payload.quantity;
+			return [...shoppingCart];
+		}
 		case "REMOVE_ITEM": {
 			return shoppingCart.filter((item) => item.prod.id !== action.payload);
 		}
