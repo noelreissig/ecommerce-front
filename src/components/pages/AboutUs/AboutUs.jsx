@@ -157,6 +157,7 @@ function AboutUs() {
                 <Link
                   to={{ pathname: "https://www.linkedin.com/in/noelreissig/" }}
                   target="_blank"
+                  className="text-decoration-none text-dark"
                 >
                   <p>
                     {" "}
@@ -179,6 +180,7 @@ function AboutUs() {
                       "https://www.linkedin.com/in/gabriel-vicente-presno/",
                   }}
                   target="_blank"
+                  className="text-decoration-none text-dark"
                 >
                   <p>
                     {" "}
@@ -201,6 +203,7 @@ function AboutUs() {
                       "https://www.linkedin.com/in/antonella-gervasini/",
                   }}
                   target="_blank"
+                  className="text-decoration-none text-dark"
                 >
                   <p>
                     {" "}

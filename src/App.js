@@ -2,7 +2,6 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home/Home";
 import NoMatch from "./components/NoMatch";
-import Contact from "./components/pages/Contact/Contact";
 import AboutUs from "./components/pages/AboutUs/AboutUs";
 import Category from "./components/pages/Category/Category";
 import BuyCompleted from "./components/pages/BuyCompleted/BuyCompleted";
@@ -19,7 +18,6 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/contacto" component={Contact} />
           <Route path="/sobre-nosotros" component={AboutUs} />
           <Route path="/carrito" component={Cart} />
           <PrivateRoute path="/mis-datos" component={MyAccount} />

@@ -48,7 +48,6 @@ function NavComponent() {
                 ))}
               </NavDropdown>
               <Nav.Link href="/sobre-nosotros">Sobre el proyecto</Nav.Link>
-              <Nav.Link href="/contacto">Contacto</Nav.Link>
             </Nav>
           </Navbar.Collapse>
 
