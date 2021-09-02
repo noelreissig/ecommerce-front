@@ -77,7 +77,14 @@ function OneProduct() {
               </h2>
 
               <div className="d-flex">
-                <h5 className="d-flex"> USD {product.price}</h5>
+                <h5 className="d-flex">
+                  {" "}
+                  USD{" "}
+                  {parseInt(product.price).toLocaleString(navigator.language, {
+                    minimumFractionDigits: 2,
+                  })}
+                </h5>
+
                 <p
                   className={`${OneProductStyles.sizeText} fw-light ms-2 mt-1`}
                 >

@@ -15,10 +15,10 @@ function AboutUs() {
                 - Sobre el proyecto -
               </h1>
               <p className="fs-5">
-                Este proyecto esta enmarcado en el curso Cooding Bootcamp de
+                Este proyecto está enmarcado en el curso Cooding Bootcamp de
                 Hack Academy. El cuál es un curso de 3 meses, extremadamente
                 práctico y de dedicación full-time. Durante este curso se
-                aprendio sobre Front-End y Back-End con el fin de lograr ser un
+                aprendió sobre Front-End y Back-End con el fin de lograr ser un
                 desarrollador web Full Stack.
               </p>
             </div>
@@ -33,21 +33,21 @@ function AboutUs() {
         </div>
         <hr />
         <div className="my-5 text-center fs-5">
-          <h2 className={`${aboutUsStyles.title} text-center pt-5`}>Resumen</h2>
+          <h2 className={`${aboutUsStyles.title} text-center pt-5`}>Resúmen</h2>
           <p className="mt-4">
-            En este ejercicio se debia construir un sitio de e-commerce,
+            En este ejercicio se debía construir un sitio de e-commerce,
             dedicado a la venta de cualquier producto. Se dividieron las tareas,
             tratando de que cada integrante realizara aproximadamente la misma
             cantidad de trabajo e intentando que las mismas sean variadas.
           </p>
           <p>
             {" "}
-            Se decidió apoyarse en las herramientas como Trello y Exallidraw,
-            donde se pueden crear una listas de tareas, tener due dates y
-            responsables de las mismas.
+            Se decidió apoyarse en las herramientas como Exallidraw y Trello,
+            donde pudimos crear listas de tareas, tener due dates y responsables
+            de las mismas.
           </p>
           <p className="">
-            Se enfatizó en trabajo en equipo, cuidando mucho la comunicación
+            Se enfatizó en el trabajo en equipo, cuidando mucho la comunicación
             entre los integrantes. Manteniendo informados a los compañeros sobre
             lo que se estaba haciendo, en qué se estaba trancado y qué se
             planeaba hacer. Ya que la buena comunicación en el equipo es clave
@@ -144,10 +144,10 @@ function AboutUs() {
                 alt="María Noel_2"
               />
               <div className="text-center ">
-                <strong>Maria Noel Reissig</strong>
+                <strong>María Noel Reissig</strong>
                 <p>
                   {" "}
-                  <i class="fab fa-linkedin"> Maria Noel Reissig</i>
+                  <i class="fab fa-linkedin"></i> María Noel Reissig
                 </p>
               </div>
             </div>
@@ -161,7 +161,7 @@ function AboutUs() {
                 <strong>Gabriel Vicente</strong>
                 <p>
                   {" "}
-                  <i class="fab fa-linkedin"> Gabriel Vicente</i>
+                  <i class="fab fa-linkedin"> </i> Gabriel Vicente
                 </p>
               </div>
             </div>
@@ -175,7 +175,7 @@ function AboutUs() {
                 <strong>Antonella Gervasini</strong>
                 <p>
                   {" "}
-                  <i class="fab fa-linkedin"> Antonella Gervasini</i>
+                  <i class="fab fa-linkedin"></i> Antonella Gervasini
                 </p>
               </div>
             </div>
