@@ -2,12 +2,13 @@ import ReactPlayer from "react-player";
 import Footer from "../../Footer/Footer";
 import NavComponent from "../../Navbar/Navbar";
 import aboutUsStyles from "./aboutUs.module.css";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
     <div>
       <NavComponent />
-      <div className="container">
+      <div className="container px-4">
         <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-md-4">
             <div>
@@ -42,9 +43,10 @@ function AboutUs() {
           </p>
           <p>
             {" "}
-            Se decidió apoyarse en las herramientas como Exallidraw y Trello,
-            donde pudimos crear listas de tareas, tener due dates y responsables
-            de las mismas.
+            Se decidió apoyarse en las herramientas como <em>
+              Exallidraw
+            </em> y <em>Trello</em>, donde pudimos crear listas de tareas, tener
+            due dates y responsables de las mismas.
           </p>
           <p className="">
             Se enfatizó en el trabajo en equipo, cuidando mucho la comunicación
@@ -53,7 +55,14 @@ function AboutUs() {
             planeaba hacer. Ya que la buena comunicación en el equipo es clave
             para el éxito del proyecto.
           </p>
+          <p className={`${aboutUsStyles.title} pt-4`}> Nota: </p>
+          <p className={`${aboutUsStyles.disclaimer} text-center px-5 pb-0`}>
+            Las imágenes e información de este proyecto, fueron recabados de la
+            página de <strong>Kave Home</strong> y utilizados sólo con fines
+            educativos.
+          </p>
         </div>
+        <hr />
         <div className="my-5">
           <h2 className={`${aboutUsStyles.title} text-center pt-5 mb-4`}>
             Tecnologías utilizadas
@@ -145,10 +154,15 @@ function AboutUs() {
               />
               <div className="text-center ">
                 <strong>María Noel Reissig</strong>
-                <p>
-                  {" "}
-                  <i class="fab fa-linkedin"></i> María Noel Reissig
-                </p>
+                <Link
+                  to={{ pathname: "https://www.linkedin.com/in/noelreissig/" }}
+                  target="_blank"
+                >
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"></i> María Noel Reissig
+                  </p>
+                </Link>
               </div>
             </div>
             <div className="col-md-3 text-center">
@@ -159,10 +173,18 @@ function AboutUs() {
               />
               <div className="text-center ">
                 <strong>Gabriel Vicente</strong>
-                <p>
-                  {" "}
-                  <i class="fab fa-linkedin"> </i> Gabriel Vicente
-                </p>
+                <Link
+                  to={{
+                    pathname:
+                      "https://www.linkedin.com/in/gabriel-vicente-presno/",
+                  }}
+                  target="_blank"
+                >
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"> </i> Gabriel Vicente
+                  </p>
+                </Link>
               </div>
             </div>
             <div className="col-md-3 text-center">
@@ -171,12 +193,20 @@ function AboutUs() {
                 src="../../img/aboutUs/Antonella_2.jpg"
                 alt="Antonella"
               />
-              <div className="text-center ">
+              <div className="text-center">
                 <strong>Antonella Gervasini</strong>
-                <p>
-                  {" "}
-                  <i class="fab fa-linkedin"></i> Antonella Gervasini
-                </p>
+                <Link
+                  to={{
+                    pathname:
+                      "https://www.linkedin.com/in/antonella-gervasini/",
+                  }}
+                  target="_blank"
+                >
+                  <p>
+                    {" "}
+                    <i class="fab fa-linkedin"></i> Antonella Gervasini
+                  </p>
+                </Link>
               </div>
             </div>
           </div>

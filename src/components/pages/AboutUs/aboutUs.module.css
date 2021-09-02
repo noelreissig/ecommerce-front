@@ -11,6 +11,10 @@
   object-fit: cover;
 }
 
+.disclaimer {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 600px) {
   .title {
     margin-top: 25px;
