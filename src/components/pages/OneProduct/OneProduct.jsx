@@ -77,7 +77,7 @@ function OneProduct() {
               </h2>
 
               <div className="d-flex">
-                <h5 className="d-flex"> USD {product.price}</h5>
+                <h5 className="d-flex fs-4"> USD {product.price}</h5>
                 <p
                   className={`${OneProductStyles.sizeText} fw-light ms-2 mt-1`}
                 >
@@ -109,6 +109,9 @@ function OneProduct() {
                   </option>
                   <option value="2">2</option>
                   <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
                 </select>
                 <button
                   onClick={() => handleBuy()}
