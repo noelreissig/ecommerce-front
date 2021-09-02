@@ -35,7 +35,6 @@ function NavComponent() {
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Brand href="/">Deco-Hack</Navbar.Brand>
-
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <NavDropdown title="Categorías" id="basic-nav-dropdown">
@@ -90,7 +89,7 @@ function NavComponent() {
                   <span className="text-light align-text-top me-2 d-none d-md-inline">
                     Hola {user.firstname}
                   </span>
-                  <span className="text-light align-text-top me-2 d-none d-md-inline">
+                  <span className="text-light align-text-top me-2">
                     <Link to="/mis-datos">
                       <i class="fas fa-user text-white"></i>
                     </Link>

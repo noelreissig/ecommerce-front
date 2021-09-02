@@ -48,37 +48,45 @@ function Categories() {
       <div className={`${categoriesStyles.stylesCategories} container pt-2`}>
         <div className="row">
           {category &&
-            category.map((eachProduct) => (
-              <div className="col-md-3" key={eachProduct.name}>
-                <Link
-                  to={`/producto/${eachProduct.slug}`}
-                  className={categoriesStyles.linkDecoration}
-                >
-                  <div>
-                    <Card
-                      className={`${cardByCategoryStyles.cardHover} shadow my-4 mx-3 d-flex text-align-center`}
-                    >
-                      <Card.Img
-                        variant="top"
-                        className={cardByCategoryStyles.images}
-                        src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${eachProduct.picture_url}`}
-                        alt={eachProduct.name}
-                      />
-                      <Card.Body>
-                        <Card.Title> {eachProduct.name} </Card.Title>
-                        <Card.Text> USD {eachProduct.price}</Card.Text>
-                        <Button
-                          variant="outline-secondary"
-                          className="rounded-pill"
-                        >
-                          Ver más
-                        </Button>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Link>
-              </div>
-            ))}
+            category.map((eachProduct) => {
+              const prodPrice = parseInt(eachProduct.price);
+              return (
+                <div className={`col-md-3`} key={eachProduct.name}>
+                  <Link
+                    to={`/producto/${eachProduct.slug}`}
+                    className={categoriesStyles.linkDecoration}
+                  >
+                    <div className="">
+                      <Card
+                        className={`${cardByCategoryStyles.cardHover} shadow my-4 mx-3 d-flex text-align-center`}
+                      >
+                        <Card.Img
+                          variant="top"
+                          className={cardByCategoryStyles.images}
+                          src={`${process.env.REACT_APP_SUPABASE_URL_IMG}/${eachProduct.picture_url}`}
+                          alt={eachProduct.name}
+                        />
+                        <Card.Body>
+                          <Card.Title> {eachProduct.name} </Card.Title>
+                          <Card.Text>
+                            USD{" "}
+                            {prodPrice.toLocaleString(navigator.language, {
+                              minimumFractionDigits: 2,
+                            })}
+                          </Card.Text>
+                          <Button
+                            variant="outline-secondary"
+                            className="rounded-pill"
+                          >
+                            Ver más
+                          </Button>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
         </div>
       </div>
 

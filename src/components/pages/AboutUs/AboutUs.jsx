@@ -8,7 +8,7 @@ function AboutUs() {
     <div>
       <NavComponent />
       <div className="container">
-        <div className="row d-flex justify-content-center align-items-center mx-0">
+        <div className="row d-flex justify-content-center align-items-center ">
           <div className="col-md-4">
             <div>
               <h1 className={`${aboutUsStyles.title}`}>

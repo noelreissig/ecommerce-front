@@ -45,10 +45,15 @@ const Cart = () => {
                 <strong>
                   USD{" "}
                   {shoppingCart.length > 0
-                    ? shoppingCart.reduce(
-                        (acum, item) => acum + item.prod.price * item.quantity,
-                        0
-                      )
+                    ? shoppingCart
+                        .reduce(
+                          (acum, item) =>
+                            acum + item.prod.price * item.quantity,
+                          0
+                        )
+                        .toLocaleString(navigator.language, {
+                          minimumFractionDigits: 2,
+                        })
                     : Number(0)}
                 </strong>
               </span>
@@ -64,10 +69,15 @@ const Cart = () => {
                 <strong>
                   USD{" "}
                   {shoppingCart.length > 0
-                    ? shoppingCart.reduce(
-                        (acum, item) => acum + item.prod.price * item.quantity,
-                        0
-                      )
+                    ? shoppingCart
+                        .reduce(
+                          (acum, item) =>
+                            acum + item.prod.price * item.quantity,
+                          0
+                        )
+                        .toLocaleString(navigator.language, {
+                          minimumFractionDigits: 2,
+                        })
                     : Number(0)}
                 </strong>
               </span>
