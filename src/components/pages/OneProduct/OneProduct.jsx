@@ -3,6 +3,8 @@ import CarouselOneProduct from "../../CarouselOneProduct/CarouselOneProduct";
 import NavComponent from "../../Navbar/Navbar";
 import OneProductStyles from "../OneProduct/oneProduct.module.css";
 import Footer from "../../Footer/Footer";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -16,6 +18,8 @@ function OneProduct() {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const [show, setShow] = useState(false);
+  const customId = "custom-id-yes";
+
   useEffect(() => {
     const getProduct = async () => {
       const response = await axios.get(
@@ -47,7 +51,29 @@ function OneProduct() {
             <div className="col-md-6 text-start pt-5">
               <h2 className=" d-flex justify-content-between">
                 {product.name}
-                <i class=" far fa-heart text-danger fs-5"></i>
+                <i
+                  className=" far fa-heart text-danger fs-5"
+                  onClick={() =>
+                    toast(
+                      "Esta funcionalidad quedó fuera del alcance del proyecto",
+
+                      {
+                        type: toast.TYPE.INFO,
+                        toastId: customId,
+                        position: toast.POSITION.TOP_RIGHT,
+                        autoClose: 2500,
+                        pauseOnFocusLoss: false,
+                        transition: Slide,
+                        pauseOnHover: false,
+                      }
+                    )
+                  }
+                >
+                  <ToastContainer
+                    icon={false}
+                    className={`${OneProductStyles.sizeToastify}`}
+                  />
+                </i>
               </h2>
 
               <div className="d-flex">

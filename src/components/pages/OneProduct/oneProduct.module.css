@@ -10,4 +10,7 @@ td {
 .sizeText {
   font-size: 0.8rem;
 }
-
+.sizeToastify {
+  font-size: 0.9rem;
+  text-align: center;
+}

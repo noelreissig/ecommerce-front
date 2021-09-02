@@ -202,7 +202,7 @@ const Buy = () => {
               </div>
             </Form>
             <hr className="mb-5" />
-            <h2 className="mt-4 text-center">Histórico de Órdenes</h2>
+            <h2 className="mt-4 text-center">Historial de Órdenes</h2>
             <div className="row mx-0 d-flex justify-content-between my-4">
               {orders.length === 0 ? (
                 <h5 className="text-center">
