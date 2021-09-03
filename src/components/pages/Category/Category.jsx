@@ -24,7 +24,6 @@ function Categories() {
     };
     getCategory();
   }, []);
-  console.log(category);
 
   return (
     <div>

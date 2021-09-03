@@ -35,8 +35,6 @@ function Register({ setRegister, show, setShow, setLogin, ...props }) {
       handleClose();
     });
   };
-  console.log(process.env.REACT_APP_API_URL);
-  console.log(process.env.REACT_APP_SUPABASE_URL_CAT);
 
   return (
     <div>

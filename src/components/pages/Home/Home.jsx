@@ -22,7 +22,6 @@ function Home() {
     getCategories();
   }, []);
 
-  console.log(categories);
   return (
     <div>
       <NavComponent />
