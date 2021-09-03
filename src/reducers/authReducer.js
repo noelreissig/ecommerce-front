@@ -7,7 +7,9 @@ function authReducer(state = { token: "" }, action) {
 			return {
 				token: "",
 			};
-
+		case "NAME_UPDATE":
+			state.firstname = action.payload;
+			return { ...state };
 		default:
 			return state;
 	}
