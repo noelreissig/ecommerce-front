@@ -3,7 +3,11 @@ import { Toast, ToastContainer } from "react-bootstrap";
 const ToastUpdate = ({ show, setShow }) => {
   return (
     <div className="">
-      <ToastContainer position="top-center" style={{ marginTop: "65px" }}>
+      <ToastContainer
+        position="top-center"
+        style={{ marginTop: "65px" }}
+        className="position-fixed"
+      >
         <Toast
           onClose={() => setShow(false)}
           show={show}
