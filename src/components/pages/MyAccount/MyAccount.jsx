@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Button, Form, Row, Col } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import Footer from "../../Footer/Footer";
 import NavComponent from "../../Navbar/Navbar";
 import { useSelector } from "react-redux";
@@ -9,8 +9,12 @@ import { useHistory } from "react-router-dom";
 import ToastUpdate from "../../ToastUpdate/ToastUpdate";
 import CardOrders from "../../CardOrders/CardOrders";
 import Card from "react-bootstrap";
+import myAccountStyles from "../MyAccount/myAccount.module.css";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Buy = () => {
+  const customId = "custom-id-yes";
   const history = useHistory();
   const { token } = useSelector((state) => state.authReducer);
   const user = useSelector((state) => state.authReducer);
@@ -221,7 +225,28 @@ const Buy = () => {
             </div>
             <hr className="my-5" />
             <h3 className="mt-4 text-center">Mis favoritos</h3>
-            <div className="row mx-0 d-flex justify-content-center my-4">
+            <div
+              className="row mx-0 d-flex justify-content-center my-4"
+              onClick={() =>
+                toast(
+                  "Esta funcionalidad quedó fuera del alcance del proyecto",
+
+                  {
+                    type: toast.TYPE.INFO,
+                    toastId: customId,
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2500,
+                    pauseOnFocusLoss: false,
+                    transition: Slide,
+                    pauseOnHover: false,
+                  }
+                )
+              }
+            >
+              <ToastContainer
+                icon={false}
+                className={`${myAccountStyles.sizeToastify}`}
+              />
               <div className="col-md-2 mb-2 mx-2 text-center">
                 <img
                   className="d-block w-100 rounded"
