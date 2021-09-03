@@ -229,7 +229,7 @@ function AboutUs() {
               target="_blank"
               className="text-decoration-none text-dark"
             >
-              {" "}
+              Admin
             </Link>
           </p>
           <p className="text-center">
