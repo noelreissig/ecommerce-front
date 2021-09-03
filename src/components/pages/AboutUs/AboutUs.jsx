@@ -95,16 +95,18 @@ function AboutUs() {
           <div className="row ">
             <div className="col-md-4 ">
               <h3 className="mt-5 pt-3">
-                Algunas de las funcionalidades que se pueden realizar siendo
-                administrador de la App.{" "}
+                El usuario puede reacorrer la página de forma muy sencilla!
               </h3>
-              <span> Consulte, edite y administre </span> sus bases de datos
-              fácilmente con una aplicación que puede ejecutarse rápidamente.
+              <p>
+                Mirar los productos dependiendo de categorías, agregar a su
+                carrito los productos de su interés, y solamente
+                logearse-registrarse al momento de querer finalizar su compra!
+              </p>
             </div>
             <div className="col-md-8">
               <div style={{ width: "90%" }}>
                 <ReactPlayer
-                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/Deco-Hack-Front.mp4"
                   width="90%"
                   playing
                   muted
@@ -118,7 +120,7 @@ function AboutUs() {
             <div className="col-md-8">
               <div style={{ width: "90%" }}>
                 <ReactPlayer
-                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/Deco-Hack-Back.mp4"
                   width="90%"
                   playing
                   muted
@@ -128,15 +130,11 @@ function AboutUs() {
             </div>
             <div className="col-md-4 ">
               <h3 className="mt-5 pt-3">
-                Y vea reflejado los cambios instantáneamente desde el lado del
-                usuario.
+                Algunas de las funcionalidades que se pueden realizar siendo
+                administrador de la App.{" "}
               </h3>
-              <p>
-                <span>
-                  Lo cuál mejora la experiencia, y no permite que el mismo se
-                  pierda de ninguna actualización!
-                </span>
-              </p>
+              <span> Consulte, edite y administre </span> sus bases de datos
+              fácilmente con una aplicación que puede ejecutarse rápidamente.
             </div>
           </div>
         </div>
@@ -221,7 +219,7 @@ function AboutUs() {
             Para poder acceder a las funcionalidades del Administrador:{" "}
           </h3>
           <p className="text-center">
-            <strong> 1. Ingresar a </strong>
+            <strong> 1. Ingresar a: </strong>
             <Link
               to={{
                 pathname: "https://ecommerce-admin-one.vercel.app/",
