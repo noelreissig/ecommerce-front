@@ -74,8 +74,8 @@ const Buy = () => {
   return (
     <div>
       <NavComponent />
-      <div className="container ">
-        <div className="row  d-flex justify-content-center">
+      <div className="container">
+        <div className="row d-flex justify-content-center">
           <div className="col-md-5 shadow  my-5 rounded">
             <Form
               onSubmit={(ev) => handleBuy(ev)}

@@ -1,5 +1,4 @@
 import React from "react";
-// import { a } from "react-router-dom";
 import footerStyles from "./footer.module.css";
 import { Link } from "react-router-dom";
 

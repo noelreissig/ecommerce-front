@@ -17,8 +17,12 @@ function ConfirmCard() {
   return (
     <div>
       <NavComponent />
-      <div className="container ">
+      <div className="container">
         <div className="row d-flex justify-content-center my-5">
+          <h5 className="text-danger text-center fs-6">
+            Aclaración: El proceso de compra es una simulación. Por favor
+            ingrese datos ficticios.{" "}
+          </h5>
           <div className="col-md-5 rounded shadow-lg my-5 p-3">
             <h5 className="text-center">
               Ingresa los datos de tu tarjeta a continuación.

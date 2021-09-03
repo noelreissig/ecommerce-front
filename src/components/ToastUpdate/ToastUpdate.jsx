@@ -1,5 +1,5 @@
 import React from "react";
-import { Toast, Row, Col, ToastContainer } from "react-bootstrap";
+import { Toast, ToastContainer } from "react-bootstrap";
 const ToastUpdate = ({ show, setShow }) => {
   return (
     <div className="">

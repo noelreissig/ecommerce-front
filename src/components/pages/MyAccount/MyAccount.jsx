@@ -5,17 +5,14 @@ import Footer from "../../Footer/Footer";
 import NavComponent from "../../Navbar/Navbar";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import ToastUpdate from "../../ToastUpdate/ToastUpdate";
 import CardOrders from "../../CardOrders/CardOrders";
-import Card from "react-bootstrap";
 import myAccountStyles from "../MyAccount/myAccount.module.css";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Buy = () => {
   const customId = "custom-id-yes";
-  const history = useHistory();
   const { token } = useSelector((state) => state.authReducer);
   const user = useSelector((state) => state.authReducer);
   const [firstname, setFirstname] = useState(user.firstname);
@@ -50,13 +47,6 @@ const Buy = () => {
   const [postalCod, setPostalCod] = useState("");
   const [show, setShow] = useState(false);
   const [orders, setOrders] = useState([]);
-
-  // useEffect(() => {
-  //   const getProduct = async () => {
-  //     await axios.get(`${process.env.REACT_APP_API_URL}/api/order/`);
-  //   };
-  //   getProduct();
-  // }, []);
 
   useEffect(() => {
     const getOrders = async () => {
@@ -171,6 +161,7 @@ const Buy = () => {
                       className="me-auto"
                       defaultValue="Choose..."
                       name="department"
+                      onChange={(ev) => setDepartment(ev.target.value)}
                     >
                       <option>Elegir...</option>
                       {departamentos.map((item) => (
@@ -298,5 +289,3 @@ const Buy = () => {
 };
 
 export default Buy;
-
-//src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg"
