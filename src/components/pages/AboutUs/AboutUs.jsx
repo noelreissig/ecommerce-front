@@ -104,7 +104,7 @@ function AboutUs() {
             <div className="col-md-8">
               <div style={{ width: "90%" }}>
                 <ReactPlayer
-                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/Deco-Hack-Front.mp4"
                   width="90%"
                   playing
                   muted
@@ -118,7 +118,7 @@ function AboutUs() {
             <div className="col-md-8">
               <div style={{ width: "90%" }}>
                 <ReactPlayer
-                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/ReactApp.mp4"
+                  url="https://tyentfaqbpgmuskfbnwk.supabase.in/storage/v1/object/public/ecommerce/video/Deco-Hack-Back.mp4"
                   width="90%"
                   playing
                   muted
@@ -221,7 +221,7 @@ function AboutUs() {
             Para poder acceder a las funcionalidades del Administrador:{" "}
           </h3>
           <p className="text-center">
-            <strong> 1. Ingresar a </strong>
+            <strong> 1. Ingresar a: </strong>
             <Link
               to={{
                 pathname: "https://ecommerce-admin-one.vercel.app/",
