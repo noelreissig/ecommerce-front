@@ -221,7 +221,16 @@ function AboutUs() {
             Para poder acceder a las funcionalidades del Administrador:{" "}
           </h3>
           <p className="text-center">
-            <strong> 1. Ingresar a </strong>//admin
+            <strong> 1. Ingresar a </strong>
+            <Link
+              to={{
+                pathname: "https://ecommerce-admin-one.vercel.app/",
+              }}
+              target="_blank"
+              className="text-decoration-none text-dark"
+            >
+              {" "}
+            </Link>
           </p>
           <p className="text-center">
             <strong>2. En el campo email: </strong> admin@admin.com
