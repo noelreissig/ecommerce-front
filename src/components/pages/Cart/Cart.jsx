@@ -102,7 +102,7 @@ const Cart = () => {
             <div className="d-flex justify-content-between"></div>
             <button
               onClick={() => handleBuy()}
-              className="btn btn-outline-success rounded-pill px-4 mt-5 w-100"
+              className="btn btn-success rounded-pill px-4 mt-5 w-100"
             >
               Confirmar Compra
             </button>
