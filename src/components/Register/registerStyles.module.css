@@ -1,18 +1,22 @@
 /* Registro */
 .registerFormContainer {
-  max-width: 600px;
+	max-width: 600px;
 }
 .register {
-  font-size: 20px;
-  font-weight: 900;
-  margin-left: 6rem;
-  margin-top: 1.8rem;
-  font-family: Verdana, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-weight: 900;
+	margin-left: 6rem;
+	margin-top: 1.8rem;
+	font-family: Verdana, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .btnRegister {
-  text-align: center;
-  border: 4px solid #ffffff;
-  border-radius: 9999px;
-  min-height: 48px;
+	text-align: center;
+	border: 4px solid #ffffff;
+	border-radius: 9999px;
+	min-height: 48px;
+}
+.error {
+	background-color: rgba(219, 36, 36, 0.377);
+	font-size: 0.9rem;
 }
