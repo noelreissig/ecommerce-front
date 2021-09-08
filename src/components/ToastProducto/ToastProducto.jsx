@@ -1,12 +1,17 @@
 import React from "react";
 import { Toast, ToastContainer } from "react-bootstrap";
 const ToastProducto = ({ show, setShow }) => {
+  const style = {
+    marginTop: "65px",
+    zIndex: "5",
+  };
+
   return (
     <div className="">
       <ToastContainer
         position="top-center"
-        style={{ marginTop: "65px" }}
-        className="position-fixed"
+        style={style}
+        className="position-fixed overlay"
       >
         <Toast
           onClose={() => setShow(false)}
