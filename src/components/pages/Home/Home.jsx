@@ -31,7 +31,7 @@ function Home() {
           ¡Te ayudamos a transformar tu hogar!
         </h2>
         <div
-          id="categories"
+          // id="categories"
           className="row g-0 d-flex justify-content-center pb-4"
         >
           {categories.map((category) => (

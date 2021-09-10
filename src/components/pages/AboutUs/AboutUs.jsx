@@ -136,7 +136,7 @@ function AboutUs() {
         </div>
         <hr />
         <div>
-          <h3 className={`${aboutUsStyles.title} text-center mb-4`}>
+          <h3 className={`${aboutUsStyles.title} text-center my-4`}>
             Equipo de Trabajo
           </h3>
           <div className="row d-flex justify-content-around">
@@ -211,17 +211,17 @@ function AboutUs() {
         <hr className="my-5" />
 
         <div className="border shadow p-4 my-5 rounded">
-          <h3 className={`${aboutUsStyles.title} text-center`}>
+          <h3 className={`${aboutUsStyles.title} text-center py-3`}>
             Para poder acceder a las funcionalidades del Administrador:{" "}
           </h3>
           <p className="text-center">
-            <strong> 1. Ingresar a: </strong>
+            <strong> 1. Ingrese haciendo click en: </strong>
             <Link
               to={{
                 pathname: "https://ecommerce-admin-one.vercel.app/",
               }}
               target="_blank"
-              className="text-decoration-none text-dark"
+              className="text-dark"
             >
               Admin
             </Link>

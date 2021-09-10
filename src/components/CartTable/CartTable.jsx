@@ -94,7 +94,7 @@ export const CartTable = () => {
           </Table>
           <button
             onClick={() => emptyCart()}
-            className="btn btn-outline-secondary rounded-pill px-4 mt-5 mb-3 fs-10"
+            className="btn btn-outline-secondary rounded-pill px-4 mt-5 mb-3"
           >
             Vaciar Carrito
           </button>
