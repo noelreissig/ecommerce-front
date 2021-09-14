@@ -44,7 +44,7 @@ function AboutUs() {
           <p>
             {" "}
             Se decidió apoyarse en las herramientas como <em>
-              Exallidraw
+              Exalidraw
             </em> y <em>Trello</em>, donde pudimos crear listas de tareas, tener
             due dates y responsables de las mismas.
           </p>
