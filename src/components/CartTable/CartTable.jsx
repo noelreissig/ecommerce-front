@@ -11,7 +11,7 @@ export const CartTable = () => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   }
   const cantidades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const emptyCart = () => dispatch({ type: "CLEAR_CART" });
+  // const emptyCart = () => dispatch({ type: "CLEAR_CART" });
   const updateQuantity = (id, quantity) =>
     dispatch({
       type: "UPDATE_QUANTITY",
@@ -92,12 +92,12 @@ export const CartTable = () => {
               })}
             </tbody>
           </Table>
-          <button
+          {/* <button
             onClick={() => emptyCart()}
-            className="btn btn-outline-secondary rounded-pill px-4 mt-5 mb-3"
+            className="btn btn-outline-secondary rounded-pill"
           >
             Vaciar Carrito
-          </button>
+          </button> */}
         </div>
       ) : (
         <h4 className="p-3 text-secondary">
