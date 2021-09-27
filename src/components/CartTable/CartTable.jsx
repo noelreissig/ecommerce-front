@@ -84,7 +84,7 @@ export const CartTable = () => {
                     <td className="text-center align-middle">
                       <i
                         onClick={() => handleDelete(item.prod.id)}
-                        className="far fa-trash-alt"
+                        className="btn far fa-trash-alt"
                       ></i>
                     </td>
                   </tr>
