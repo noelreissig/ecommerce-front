@@ -143,7 +143,7 @@ function AboutUs() {
             <div className="col-md-3 text-center">
               <img
                 className={`${aboutUsStyles.imgProfile} img-fluid mb-3 `}
-                src="../../img/aboutUs/Maria_Noel.png"
+                src="../../img/aboutUs/Maria_Noel.jpg"
                 alt="María Noel_2"
               />
               <div className="text-center ">
