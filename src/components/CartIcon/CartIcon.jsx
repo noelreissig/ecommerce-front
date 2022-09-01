@@ -6,22 +6,22 @@ import "./cartIcon.css";
 import { useSelector } from "react-redux";
 
 const CartIcon = () => {
-  const shoppingCart = useSelector((state) => state.cartReducer);
-  return (
-    <div>
-      <IconButton aria-label="cart" id="cart-icon">
-        <Badge
-          badgeContent={shoppingCart.reduce(
-            (acum, item) => acum + Number(item.quantity),
-            0
-          )}
-          color="secondary"
-        >
-          <i className="text-secondary fas fa-shopping-cart"></i>
-        </Badge>
-      </IconButton>
-    </div>
-  );
+	const shoppingCart = useSelector((state) => state.cartReducer);
+	return (
+		<div>
+			<IconButton aria-label="cart" id="cart-icon">
+				<Badge
+					badgeContent={shoppingCart.reduce(
+						(acum, item) => acum + Number(item.quantity),
+						0
+					)}
+					color="secondary"
+				>
+					<i className="text-secondary  fas fa-shopping-cart"></i>
+				</Badge>
+			</IconButton>
+		</div>
+	);
 };
 
 export default CartIcon;
